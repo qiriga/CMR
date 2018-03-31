@@ -1,0 +1,13 @@
+{% extends "base.html.twig" %}
+
+{% block content %}
+    <div class="container">
+        <form action="/medicinesortcreate" method="post">
+            药品类别名称：<div class="form-group"><input type="text" name="msortname" id="msortname">
+            </div>
+            <div>
+                <input type="submit" value="确 定">
+            </div>
+        </form>
+    </div>
+{% endblock %}
