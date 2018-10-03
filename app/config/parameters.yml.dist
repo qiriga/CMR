@@ -4,7 +4,7 @@
 # See https://symfony.com/doc/current/best_practices/configuration.html#canonical-parameters
 parameters:
     # The code of the default language used by the application ('en' = English)
-    locale: en
+    locale: zh_CN
 
     # The 'secret' value is a random string of characters used by Symfony to
     # to add more entropy to security related operations.

@@ -347,6 +347,11 @@
                 <source>rss.description</source>
                 <target>Symfony 示例博客上发布的最新文章</target>
             </trans-unit>
+
+            <trans-unit id="medicine.backlist">
+                <source>medicine.backlist</source>
+                <target>返回列表</target>
+            </trans-unit>
         </body>
     </file>
 </xliff>

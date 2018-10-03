@@ -1,0 +1,32 @@
+{% extends 'admin/layout.html.twig' %}
+
+
+{% block main %}
+    <h1>{{ chmedicine.breed }}</h1>
+    <span class="metadata"><i class="fa fa-feed"></i>生产商:{{ chmedicine.meentreprise.name }}</span><br>
+    <span class="metadata"><i class="fa fa-ambulance"></i>剂型:{{ chmedicine.Dosage_form }}</span><br>
+    <span class="metadata"><i class="fa fa-apple"></i>处方 :{{ chmedicine.prescription}}</span><br>
+    <span class="metadata"><i class="fa fa-bed"></i>方源 :{{ chmedicine.Drug_source }}</span><br>
+    <span class="metadata"><i class="fa fa-beer"></i>道地药材 :{{ chmedicine.regional_drug }}</span><br>
+    <span class="metadata"><i class="fa fa-fa"></i>销售额 :{{ chmedicine.sales_amount }}</span><br>
+    <span class="metadata"><i class="fa fa-navicon"></i>批准文号:{{ chmedicine.Approval_number }}</span><br>
+    <div class="section" style="width:200px;">
+        <a href="{{ path('chmedicine_list') }}" class="btn btn-lg btn-block btn-success">
+            <i class="fa fa-backward" aria-hidden="true"></i>{{ 'medicine.backlist'|trans }}
+        </a>
+    </div>
+    {# <p class="post-metadata">
+       <span class="metadata"><i class="fa fa-calendar"></i> {{ chmedicine.publishedAt|localizeddate('long', 'medium', null, 'UTC') }}</span>
+        <span class="metadata"><i class="fa fa-user"></i> {{ chmedicine.author.fullName }}</span>
+    </p>
+
+    <div class="well">
+        <p class="m-b-0"><strong>{{ 'label.summary'|trans }}</strong>: {{ chmedicine.summary }}</p>
+    </div>
+
+    {{ chmedicine.content|md2html }}
+
+    {{ include('blog/_post_tags.html.twig') }}#}
+{% endblock %}
+
+

@@ -17,11 +17,21 @@ app:
 # the route (FrameworkBundle:Template:template) is a convenient shortcut when
 # the template can be rendered without executing any logic in your own controller.
 # See https://symfony.com/doc/current/cookbook/templating/render_without_controller.html
+## homepage:
+ #   path: /{_locale}
+  #  requirements:
+   #     _locale: '%app_locales%'
+    #defaults:
+     #   _controller: FrameworkBundle:Template:template
+      #  template:    default/homepage.html.twig
+       # _locale:     '%locale%'
+
 homepage:
-    path: /{_locale}
-    requirements:
-        _locale: '%app_locales%'
-    defaults:
-        _controller: FrameworkBundle:Template:template
-        template:    default/homepage.html.twig
-        _locale:     '%locale%'
+  path: /{_locale}
+  requirements:
+    _locale: '%app_locales%'
+  defaults:
+    _controller: AppBundle:ChMedicine:showList
+    _locale: zh_CN
+    #_controller: Symfony\Bundel\FrameworkBundle\Controller\TemplateController::templateAction
+    #template: chmedicines/chimedicinedetail.html.twig
