@@ -8,8 +8,8 @@
 
 namespace AppBundle\Controller;
 
-use AppBundle\Entity\MEENTREPRISE;
-use AppBundle\Entity\CHMEDICINE;
+use AppBundle\Entity\MeEnterprise;
+use AppBundle\Entity\ChMedicine;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\ParamConverter;
@@ -41,9 +41,9 @@ class MeEntrepriseController extends Controller
 
      /**
      * @Route("/cnmedicinelist/{id}",name="cnmedicinelist")
-     * @ParamConverter("mentreprise", class="AppBundle:MEENTREPRISE",options={"id" = "id"})
+     * @ParamConverter("mentreprise", class="AppBundle:MeEnterprise",options={"id" = "id"})
      */
-    public function listAction($id,MEENTREPRISE $mentreprise)
+    public function listAction($id, MeEnterprise $mentreprise)
     {
         if (!$mentreprise) {
             throw $this->createNotFoundException(
@@ -51,7 +51,7 @@ class MeEntrepriseController extends Controller
                 );
         }
         $em = $this->getDoctrine()->getManager();
-        $chmedicines = $em->getRepository(CHMEDICINE::class)->findBy(array('meentreprise' => $mentreprise));
+        $chmedicines = $em->getRepository(ChMedicine::class)->findBy(array('meentreprise' => $mentreprise));
         //return new Response('Jarrvie.');
         //$medicines = $this->getDoctrine()->getRepository(Medicine::class)->findBy();
         //dump($medicines);

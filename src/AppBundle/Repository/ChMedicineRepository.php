@@ -9,10 +9,10 @@
 namespace AppBundle\Repository;
 
 
-use AppBundle\Entity\CHMEDICINE;
+use AppBundle\Entity\ChMedicine;
 use Doctrine\ORM\EntityRepository;
 
-class CHMEDICINERepository extends EntityRepository
+class ChMedicineRepository extends EntityRepository
 {
     /**
      * Removes all non-alphanumeric characters except whitespaces.
@@ -35,7 +35,7 @@ class CHMEDICINERepository extends EntityRepository
      *
      * @return array
      */
-    public function findBySearchQuery($rawQuery, $limit = CHMEDICINE::NUM_ITEMS)
+    public function findBySearchQuery($rawQuery, $limit = ChMedicine::NUM_ITEMS)
     {
         $query = $this->sanitizeSearchQuery($rawQuery);
         $searchTerms = $this->extractSearchTerms($query);

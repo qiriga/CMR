@@ -8,8 +8,8 @@
 
 namespace AppBundle\Controller;
 
-use AppBundle\Entity\MEENTREPRISE;
-use AppBundle\Entity\CHMEDICINE;
+use AppBundle\Entity\MeEnterprise;
+use AppBundle\Entity\ChMedicine;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
@@ -31,8 +31,8 @@ class ChMedicineController extends Controller
     function showListAction()
     {
         $em = $this->getDoctrine()->getManager();
-        $meentrepris = $em->getRepository(MEENTREPRISE::class)->findAll();
-        ///$chmedicines = $em->getRepository(CHMEDICINE::class)->findBy(array('meentreprise' => 'ASC'));
+        $meentrepris = $em->getRepository(MeEnterprise::class)->findAll();
+        ///$chmedicines = $em->getRepository(ChMedicine::class)->findBy(array('meentreprise' => 'ASC'));
         //dump($meentrepris);
 
         //return new Response('Jarrvie.');
@@ -48,7 +48,7 @@ class ChMedicineController extends Controller
     {
         //return new Response($id);
         $em = $this->getDoctrine()->getManager();
-        $chmedicine = $em->getRepository(CHMEDICINE::class)->findOneBy(array('id'=>$id));
+        $chmedicine = $em->getRepository(ChMedicine::class)->findOneBy(array('id'=>$id));
 
         return $this->render('/chmedicines/chimedicinedetail.html.twig', array('chmedicine' => $chmedicine));
     }
@@ -71,7 +71,7 @@ class ChMedicineController extends Controller
        // return new Response('<script>console.log('.$query.')</script>');
 
 
-        $chmedicines = $this->getDoctrine()->getRepository(CHMEDICINE::class)->findAll();//findBySearchQuery($query);
+        $chmedicines = $this->getDoctrine()->getRepository(ChMedicine::class)->findAll();//findBySearchQuery($query);
 
         //echo sizeof($chmedicines);
         /*$results = [];

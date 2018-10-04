@@ -13,10 +13,10 @@ use Doctrine\ORM\Mapping as ORM;
 
 
 /**
- * @ORM\Entity(repositoryClass="AppBundle\Repository\CHMEDICINERepository")
- * @ORM\Table(name="CHMEDICINE")
+ * @ORM\Entity(repositoryClass="AppBundle\Repository\ChMedicineRepository")
+ * @ORM\Table(name="ChMedicine")
  */
-class CHMEDICINE
+class ChMedicine
 {
     /**
      * Use constants to define configuration options that rarely change instead
@@ -28,57 +28,105 @@ class CHMEDICINE
 
     /**
      * @ORM\Id
-     * @ORM\Column(type="string",name="id") */
+     * @ORM\Column(type="string",name="id")
+     * */
     private $id;
 
-    /** @ORM\Column(type="string",name="enterid") */
+    /**
+     * 生产企业ID
+     * @ORM\Column(type="string",name="enterid")
+     */
     private $enterid;
 
-    /** @ORM\Column(type="string",name="breed") */
-    private $breed;                                /*品种*/
+    /**
+     * 品种
+     * @ORM\Column(type="string",name="breed")
+     */
+    private $breed;
 
-    /** @ORM\Column(type="string",name="Dosage_form") */
-    private $Dosage_form;                          /*剂型*/
+    /**
+     * 剂型
+     * @ORM\Column(type="string",name="Dosage_form")
+     */
+    private $Dosage_form;
 
-    /** @ORM\Column(type="string",name="prescription") */
-    private $prescription;                         /*处方*/
+    /**
+     * 处方
+     * @ORM\Column(type="string",name="prescription")
+     */
+    private $prescription;
 
-    /** @ORM\Column(type="string",name="Drug_source") */
-    private $Drug_source;                          /*方源*/
-
-    /** @ORM\Column(type="string",name="regional_drug") */
-    private $regional_drug;                       /*道地药材*/
-
-    /** @ORM\Column(type="string",name="sales_amount") */
-    private $sales_amount;                        /*销售额*/
-
-    /** @ORM\Column(type="string",name="Approval_number") */
-    private $Approval_number;                     /*批准文号*/
-
-
-
+    /**
+     * 方源
+     * @ORM\Column(type="string",name="Drug_source")
+     */
+    private $Drug_source;
 
 
     /**
-     * @ORM\ManyToOne(targetEntity="MEENTREPRISE", inversedBy="chmedicines")
+     * 销售额
+     * @ORM\Column(type="string",name="sales_amount")
+     */
+    private $sales_amount;
+
+    /**
+     * 批准文号
+     * @ORM\Column(type="string",name="Approval_number")
+     */
+    private $Approval_number;
+
+    /**
+     * 创建时间
+     * @ORM\Column(type="datetimetz",name=""create_time)
+     */
+    private $createTime;
+
+    /**
+     * 更新时间
+     * @ORM\Column(type="update_time",name="update_time")
+     */
+    private $updateTime;
+
+
+    /**
+    * @ManyToMany(targetEntity="ChMaterials")
+    * @JoinTable(name="Link_ChMedicine_ChMaterials",
+     *     joinColumns={@JoinColumn(name="medicine_id",referencedColumnName="id")},
+     *     inverseJoinColumns={@JoinColumn(name="material_id",referencedColumnName="id")}
+     *     )
+    */
+    private $chMaterials;
+
+
+    /**
+     * @ORM\ManyToOne(targetEntity="MeEnterprise", inversedBy="chMedicines")
      * @ORM\JoinColumn(name="enterid", referencedColumnName="id")
      */
-    private $meentreprise;
+    private $meEnterprise;
+
+    /**
+     * ChMedicine constructor.
+     * @param $chMaterials
+     */
+    public function __construct()
+    {
+        $this->chMaterials = new \Doctrine\Common\Collections\ArrayCollection();
+    }
 
     /**
      * @return mixed
      */
-    public function getMeentreprise(): MEENTREPRISE
+    public function getMeEnterprise(): MeEnterprise
     {
-        return $this->meentreprise;
+        return $this->meEnterprise;
     }
 
     /**
-     * @param mixed $meentreprise
+     * @param mixed $meEnterprise
      */
-    public function setMeentreprise(MEENTREPRISE $meentreprise):self
+    public function setMeEnterprise(MeEnterprise $meEnterprise):self
     {
-        $this->meentreprise = $meentreprise;
+        $this->meEnterprise= $meEnterprise;
         return $this;
     }
 
@@ -177,22 +225,6 @@ class CHMEDICINE
     public function setDrug_Source($Drug_source)
     {
         $this->Drug_source = $Drug_source;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getRegional_Drug()
-    {
-        return $this->regional_drug;
-    }
-
-    /**
-     * @param mixed $regional_drug
-     */
-    public function setRegional_Drug($regional_drug)
-    {
-        $this->regional_drug = $regional_drug;
     }
 
     /**
