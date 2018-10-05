@@ -31,12 +31,12 @@ class ChMedicineController extends Controller
     function showListAction()
     {
         $em = $this->getDoctrine()->getManager();
-        $meentrepris = $em->getRepository(MeEnterprise::class)->findAll();
+        $meenterpris = $em->getRepository(MeEnterprise::class)->findAll();
         ///$chmedicines = $em->getRepository(ChMedicine::class)->findBy(array('meentreprise' => 'ASC'));
         //dump($meentrepris);
 
         //return new Response('Jarrvie.');
-        return $this->render('/chmedicines/entremedicinelist.html.twig', array('meentrepris' => $meentrepris));
+        return $this->render('/chmedicines/entermedicinelist.html.twig', array('meenterpris' => $meenterpris));
     }
 
     /**
@@ -81,7 +81,7 @@ class ChMedicineController extends Controller
         foreach ($chmedicines as $chmedicine) {
             $results[] = [
                 'title' => htmlspecialchars($chmedicine->getBreed()),
-                'summary' => htmlspecialchars($chmedicine->getMeentreprise()->getName()),
+                'summary' => htmlspecialchars($chmedicine->getMeEnterprise()->getName()),
                // 'url' => $this->generateUrl('chmedicine_detail', ['slug' => $chmedicine->getId()]),
             ];
         }

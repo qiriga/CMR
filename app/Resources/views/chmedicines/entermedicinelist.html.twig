@@ -2,10 +2,11 @@
 
 {% block main %}
     <table class="table table-hover table-responsive">
-        {% for meentre in meentrepris %}
+        {% for meenter in meenterpris %}
         <thead>
         <tr>
-            <th colspan="3" style="text-align: center;">{{ meentre.name }}</th>
+            <th colspan="1" style="text-align: center;">{{ meenter.name }} </th>
+            <th colspan="2">  生产的中成药品种类：{{ meenter.chMedicines|length }}</th>
         </tr>
         <tr>
             <th>药品名称</th>
@@ -15,7 +16,7 @@
         </tr>
         </thead>
         <tbody>
-        {%  for ch in  meentre.chmedicine %}
+        {%  for ch in  meenter.chMedicines %}
             <tr>
                 <td>{{ ch.breed }}</td>
                 <td>{{ ch.Dosage_form }}</td>
@@ -23,8 +24,12 @@
                 <td><a href="{{ path('chmedicine_detail',{id:ch.id}) }}" class="btn btn-sm btn-default">
                         <i class="fa fa-eye" aria-hidden="true"></i> {{ 'action.show'|trans }}
                     </a>
-                    <a href="" class="btn btn-default btn-sm">编辑</a>
-                    <a href="" class="btn btn-default btn-sm">删除</a>
+                    <a href="" class="btn btn-default btn-sm">
+                        <i class="fa fa-edit" aria-hidden="true"></i>
+                        {{ 'action.edit'|trans }}</a>
+                    <a href="" class="btn btn-default btn-sm">
+                        <i class="fa fa-trash" aria-hidden="true"></i>
+                        {{ 'action.delete'|trans }}</a>
                 </td>
             </tr>
         {% endfor %}

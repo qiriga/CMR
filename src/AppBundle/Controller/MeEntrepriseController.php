@@ -41,17 +41,17 @@ class MeEntrepriseController extends Controller
 
      /**
      * @Route("/cnmedicinelist/{id}",name="cnmedicinelist")
-     * @ParamConverter("mentreprise", class="AppBundle:MeEnterprise",options={"id" = "id"})
+     * @ParamConverter("menterprise", class="AppBundle:MeEnterprise",options={"id" = "id"})
      */
-    public function listAction($id, MeEnterprise $mentreprise)
+    public function listAction($id, MeEnterprise $menterprise)
     {
-        if (!$mentreprise) {
+        if (!$menterprise) {
             throw $this->createNotFoundException(
                 'No product found for id '.$id
                 );
         }
         $em = $this->getDoctrine()->getManager();
-        $chmedicines = $em->getRepository(ChMedicine::class)->findBy(array('meentreprise' => $mentreprise));
+        $chmedicines = $em->getRepository(ChMedicine::class)->findBy(array('meenterprise' => $menterprise));
         //return new Response('Jarrvie.');
         //$medicines = $this->getDoctrine()->getRepository(Medicine::class)->findBy();
         //dump($medicines);

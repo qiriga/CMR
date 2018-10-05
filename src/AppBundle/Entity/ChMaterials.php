@@ -9,10 +9,13 @@
 namespace AppBundle\Entity;
 
 
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 
 /**
+ * @ORM\Entity
  * @ORM\Table(name="ChMaterials")
  */
 class ChMaterials
@@ -73,18 +76,27 @@ class ChMaterials
      */
     private $updateTime;
 
+
     /**
-     * @ManyToMany(targetEntity="ChMedicine",mappedBy="chMaterials")
+     * @ORM\OneToMany(targetEntity="LinkChMedicineChMaterials",mappedBy="chMaterials",orphanRemoval=true)
      */
-    private $ChMedicines;
+    private $linkChMedicineChMaterials;
+
+    /**
+     * @return ChMaterials|LinkChMedicineChMaterials[]
+     */
+    public function getLinkChMedicineChMaterials():Collection
+    {
+        return $this->linkChMedicineChMaterials;
+    }
+
 
     /**
      * ChMaterials constructor.
-     * @param $ChMedicines
      */
     public function __construct()
     {
-        $this->ChMedicines =  new \Doctrine\Common\Collections\ArrayCollection();
+        $this->linkChMedicineChMaterials = new ArrayCollection();
     }
 
 

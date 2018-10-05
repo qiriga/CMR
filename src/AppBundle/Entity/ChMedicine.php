@@ -10,7 +10,7 @@ namespace AppBundle\Entity;
 
 
 use Doctrine\ORM\Mapping as ORM;
-
+use Doctrine\Common\Collections\ArrayCollection;
 
 /**
  * @ORM\Entity(repositoryClass="AppBundle\Repository\ChMedicineRepository")
@@ -34,9 +34,9 @@ class ChMedicine
 
     /**
      * 生产企业ID
-     * @ORM\Column(type="string",name="enterid")
+     * @ORM\Column(type="string",name="enter_id")
      */
-    private $enterid;
+    private $enterId;
 
     /**
      * 品种
@@ -50,11 +50,6 @@ class ChMedicine
      */
     private $Dosage_form;
 
-    /**
-     * 处方
-     * @ORM\Column(type="string",name="prescription")
-     */
-    private $prescription;
 
     /**
      * 方源
@@ -77,40 +72,61 @@ class ChMedicine
 
     /**
      * 创建时间
-     * @ORM\Column(type="datetimetz",name=""create_time)
+     * @ORM\Column(type="datetimetz",name="create_time")
      */
     private $createTime;
 
     /**
      * 更新时间
-     * @ORM\Column(type="update_time",name="update_time")
+     * @ORM\Column(type="datetimetz",name="update_time")
      */
     private $updateTime;
 
+    /**
+     * @return mixed
+     */
+    public function getCreateTime()
+    {
+        return $this->createTime;
+    }
 
     /**
-    * @ManyToMany(targetEntity="ChMaterials")
-    * @JoinTable(name="Link_ChMedicine_ChMaterials",
-     *     joinColumns={@JoinColumn(name="medicine_id",referencedColumnName="id")},
-     *     inverseJoinColumns={@JoinColumn(name="material_id",referencedColumnName="id")}
-     *     )
+     * @return mixed
+     */
+    public function getUpdateTime()
+    {
+        return $this->updateTime;
+    }
+
+
+    /**
+    * @ORM\OneToMany(targetEntity="LinkChMedicineChMaterials",mappedBy="chMedicine",orphanRemoval=true)
     */
-    private $chMaterials;
+    private $linkChMedicineChMaterials;
+
+
+    /**
+     * @return ChMedicine|LinkChMedicineChMaterials[]
+     * []
+     */
+    public function getLinkChMedicineChMaterials(): ArrayCollection
+    {
+        return $this->linkChMedicineChMaterials;
+    }
 
 
     /**
      * @ORM\ManyToOne(targetEntity="MeEnterprise", inversedBy="chMedicines")
-     * @ORM\JoinColumn(name="enterid", referencedColumnName="id")
+     * @ORM\JoinColumn(name="enter_id", referencedColumnName="id")
      */
     private $meEnterprise;
 
     /**
      * ChMedicine constructor.
-     * @param $chMaterials
      */
     public function __construct()
     {
-        $this->chMaterials = new \Doctrine\Common\Collections\ArrayCollection();
+        $this->linkChMedicineChMaterials = new ArrayCollection();
     }
 
     /**
@@ -150,17 +166,17 @@ class ChMedicine
     /**
      * @return mixed
      */
-    public function getEnterid()
+    public function getEnterId()
     {
-        return $this->enterid;
+        return $this->enterId;
     }
 
     /**
-     * @param mixed $enterid
+     * @param mixed $enterId
      */
-    public function setEnterid($enterid)
+    public function setEnterid($enterId)
     {
-        $this->enterid = $enterid;
+        $this->enterId = $enterId;
     }
 
     /**
@@ -195,21 +211,6 @@ class ChMedicine
         $this->Dosage_form = $Dosage_form;
     }
 
-    /**
-     * @return mixed
-     */
-    public function getPrescription()
-    {
-        return $this->prescription;
-    }
-
-    /**
-     * @param mixed $prescription
-     */
-    public function setPrescription($prescription)
-    {
-        $this->prescription = $prescription;
-    }
 
     /**
      * @return mixed
