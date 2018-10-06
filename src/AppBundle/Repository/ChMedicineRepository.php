@@ -11,6 +11,9 @@ namespace AppBundle\Repository;
 
 use AppBundle\Entity\ChMedicine;
 use Doctrine\ORM\EntityRepository;
+use Doctrine\ORM\Query;
+use Pagerfanta\Adapter\DoctrineORMAdapter;
+use Pagerfanta\Pagerfanta;
 
 class ChMedicineRepository extends EntityRepository
 {
@@ -23,7 +26,8 @@ class ChMedicineRepository extends EntityRepository
      */
     private function sanitizeSearchQuery($query)
     {
-        return preg_replace('/[^[:alnum:] ]/', '', trim(preg_replace('/[[:space:]]+/', ' ', $query)));
+        return $query;
+        //return preg_replace('/[^[:alnum:] ]/', '', trim(preg_replace('/[[:space:]]+/', ' ', $query)));
     }
 
 
@@ -45,17 +49,17 @@ class ChMedicineRepository extends EntityRepository
             return [];
         }
 
-        $queryBuilder = $this->createQueryBuilder('ch');
+        $queryBuilder = $this->createQueryBuilder('c');
 
         foreach ($searchTerms as $key => $term) {
             $queryBuilder
-                ->orWhere('ch.breed LIKE :t_'.$key)
+                ->orWhere('c.breed LIKE :t_'.$key)
                 ->setParameter('t_'.$key, '%'.$term.'%')
             ;
         }
 
         return $queryBuilder
-            ->orderBy('ch.id', 'DESC')
+            ->orderBy('c.id', 'DESC')
             ->setMaxResults($limit)
             ->getQuery()
             ->getResult();
@@ -74,7 +78,7 @@ class ChMedicineRepository extends EntityRepository
     private function extractSearchTerms($searchQuery)
     {
         $terms = array_unique(explode(' ', mb_strtolower($searchQuery)));
-
+        /*return $terms;*/
         return array_filter($terms, function ($term) {
             return 2 <= mb_strlen($term);
         });

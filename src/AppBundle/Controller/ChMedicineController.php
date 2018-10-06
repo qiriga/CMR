@@ -68,10 +68,11 @@ class ChMedicineController extends Controller
 
         $query = $request->query->get('q', '');
         //return $this->render('/chmedicines/abc.html.twig',array('abc'=>$query));
-       // return new Response('<script>console.log('.$query.')</script>');
+       // return new Response('<script>console.log('.$query.')</scri
+        //pt>');
 
-
-        $chmedicines = $this->getDoctrine()->getRepository(ChMedicine::class)->findAll();//findBySearchQuery($query);
+        //find('c1bbb8e7-79e1-11e8-8a01-00ffe398c4c3');
+        $chmedicines = $this->getDoctrine()->getRepository(ChMedicine::class)->findBySearchQuery($query);
 
         //echo sizeof($chmedicines);
         /*$results = [];
