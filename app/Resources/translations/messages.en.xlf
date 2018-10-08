@@ -109,6 +109,10 @@
                 <source>action.edit</source>
                 <target>Edit</target>
             </trans-unit>
+            <trans-unit id="action.delete">
+                <source>action.delete</source>
+                <target>Edit</target>
+            </trans-unit>
             <trans-unit id="action.edit_post">
                 <source>action.edit_post</source>
                 <target>Edit post</target>

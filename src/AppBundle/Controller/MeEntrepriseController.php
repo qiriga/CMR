@@ -35,7 +35,17 @@ class MeEntrepriseController extends Controller
     public function helloAction($name)
     {
         return new Response("hello ".$name);
+    }
 
+    /**
+     * @Route("/meenterpriselist",name="enterpriselist")
+     * @Template()
+     */
+    public function lis0tAction( )
+    {
+        $em = $this->getDoctrine()->getManager();
+        $meenterprise = $em->getRepository(MeEnterprise::class)->findAll();
+        return $this->render('/chmedicines/meenterpriselist.html.twig',array('meenterprise' => $meenterprise));
     }
 
 
@@ -43,7 +53,7 @@ class MeEntrepriseController extends Controller
      * @Route("/cnmedicinelist/{id}",name="cnmedicinelist")
      * @ParamConverter("menterprise", class="AppBundle:MeEnterprise",options={"id" = "id"})
      */
-    public function listAction($id, MeEnterprise $menterprise)
+    public function showByIdAction($id, MeEnterprise $menterprise)
     {
         if (!$menterprise) {
             throw $this->createNotFoundException(

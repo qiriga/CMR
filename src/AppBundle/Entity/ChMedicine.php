@@ -11,6 +11,7 @@ namespace AppBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 
 /**
  * @ORM\Entity(repositoryClass="AppBundle\Repository\ChMedicineRepository")
@@ -109,7 +110,7 @@ class ChMedicine
      * @return ChMedicine|LinkChMedicineChMaterials[]
      * []
      */
-    public function getLinkChMedicineChMaterials(): ArrayCollection
+    public function getLinkChMedicineChMaterials(): Collection
     {
         return $this->linkChMedicineChMaterials;
     }

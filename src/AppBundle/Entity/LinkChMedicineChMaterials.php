@@ -29,16 +29,30 @@ class LinkChMedicineChMaterials
     private $id;
 
     /**
-     * 创建时间
+     * 药材ID
      * @ORM\Column(type="string",name="material_id")
      */
     private $materialId;
 
     /**
-     * 创建时间
+     * 药品ID
      * @ORM\Column(type="string",name="medicine_id")
      */
     private $medicineId;
+
+    /**
+     * 量
+     * @ORM\Column(type="integer",name="Dosage")
+     */
+    private $dosage;
+
+
+    /**
+     * 计量单位
+     * @ORM\Column(type="string",name="unit")
+     */
+    private $unit;
+
 
     /**
      * 创建时间
@@ -57,6 +71,38 @@ class LinkChMedicineChMaterials
      * @ORM\JoinColumn(name="medicine_id", referencedColumnName="id")
      */
     private $chMedicine;
+
+    /**
+     * @return mixed
+     */
+    public function getDosage()
+    {
+        return $this->dosage;
+    }
+
+    /**
+     * @param mixed $dosage
+     */
+    public function setDosage($dosage)
+    {
+        $this->dosage = $dosage;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getUnit()
+    {
+        return $this->unit;
+    }
+
+    /**
+     * @param mixed $unit
+     */
+    public function setUnit($unit)
+    {
+        $this->unit = $unit;
+    }
 
     /**
      * @ORM\ManyToOne(targetEntity="ChMaterials", inversedBy="linkChMedicineChMaterials")
