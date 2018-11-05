@@ -8,9 +8,10 @@
 {% block main %}
     <h1 class="center-block text-center">江西省中成药数据库</h1>
     <form action="{{ path('chmedicine_search') }}" method="get">
+
         <div class="form-group">
-            <select name="t" class="form-control" style="width: 20%; padding-right: 100px;margin-top: 10px;">
-                <option value="0">企业</option>
+            <select name="t" class="form-control"  style="width:120px;color: rebeccapurple;">
+                <option value="0" selected>企业</option>
                 <option value="1">品种</option>
                 <option value="2">药材</option>
             </select>
