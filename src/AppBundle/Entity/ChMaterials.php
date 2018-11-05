@@ -15,8 +15,9 @@ use Doctrine\ORM\Mapping as ORM;
 
 
 /**
- * @ORM\Entity
+ * @ORM\Entity(repositoryClass="AppBundle\Repository\ChMaterialsRepository")
  * @ORM\Table(name="ChMaterials")
+ *
  */
 class ChMaterials
 {

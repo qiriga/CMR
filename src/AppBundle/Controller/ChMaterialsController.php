@@ -11,6 +11,7 @@ namespace AppBundle\Controller;
 use AppBundle\Entity\ChMaterials;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Cache;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Request;
@@ -25,12 +26,14 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
 class ChMaterialsController extends Controller
 {
     /**
-     * @Route("/allshow",name="chmaterials_list")
+     * @Route("/allshow", defaults={ "page": "1","_format"="html"},name="chmaterials_list")
+     * @Route("/page/{page}", defaults={"_format"="html"}, requirements={"page": "[1-9]\d*"}, name="chmaterials_index_paginated")
+     * @Cache(smaxage="10")
      */
-    function showListAction()
+    function showListAction($page)
     {
         $em = $this->getDoctrine()->getManager();
-        $chmaterials= $em->getRepository(ChMaterials::class)->findAll();
+        $chmaterials= $em->getRepository(ChMaterials::class)->findLatest($page);//findAll();
         ///$chmedicines = $em->getRepository(ChMedicine::class)->findBy(array('meentreprise' => 'ASC'));
         //return new Response('Jarrvie.');
         //dump($meenterpris);

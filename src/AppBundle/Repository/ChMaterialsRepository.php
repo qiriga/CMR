@@ -2,21 +2,20 @@
 /**
  * Created by PhpStorm.
  * User: QRG
- * Date: 2018/7/29
- * Time: 11:48
+ * Date: 2018/10/8
+ * Time: 22:01
  */
 
 namespace AppBundle\Repository;
 
 
-use AppBundle\Entity\ChMedicine;
-use Doctrine\ORM\EntityManager;
+use AppBundle\Entity\ChMaterials;
 use Doctrine\ORM\EntityRepository;
 use Doctrine\ORM\Query;
 use Pagerfanta\Adapter\DoctrineORMAdapter;
 use Pagerfanta\Pagerfanta;
 
-class ChMedicineRepository extends EntityRepository
+class ChMaterialsRepository extends EntityRepository
 {
 
     /**
@@ -28,9 +27,8 @@ class ChMedicineRepository extends EntityRepository
     {
         $query = $this->getEntityManager()
             ->createQuery('
-                SELECT m,e
-                FROM AppBundle:ChMedicine m
-                JOIN m.meEnterprise e
+                SELECT m
+                FROM AppBundle:ChMaterials m
                 WHERE m.createTime <= :now
                 ORDER BY m.createTime DESC
             ')
@@ -43,7 +41,7 @@ class ChMedicineRepository extends EntityRepository
     private function createPaginator(Query $query, $page)
     {
         $paginator = new Pagerfanta(new DoctrineORMAdapter($query));
-        $paginator->setMaxPerPage(ChMedicine::NUM_ITEMS);
+        $paginator->setMaxPerPage(ChMaterials::NUM_ITEMS);
         $paginator->setCurrentPage($page);
 
         return $paginator;
@@ -53,12 +51,11 @@ class ChMedicineRepository extends EntityRepository
 
     /**
      * @param string $rawQuery The search query as input by the user
-     * @param string $searchType The search type as select by the user
      * @param int    $limit    The maximum number of results returned
      *
      * @return array
      */
-    public function findBySearchQuery($rawQuery,$searchType, $limit = 30)//ChMedicine::NUM_ITEMS)
+    public function findBySearchQuery($rawQuery, $limit = ChMaterials::NUM_ITEMS)
     {
         $query = $this->sanitizeSearchQuery($rawQuery);
         $searchTerms = $this->extractSearchTerms($query);
@@ -67,37 +64,16 @@ class ChMedicineRepository extends EntityRepository
         if (0 === count($searchTerms)) {
             return [];
         }
-        //$em= $this->getEntityManager();
+
         $queryBuilder = $this->createQueryBuilder('c');
-        //$queryBuilder = $em->createQueryBuilder();
-        switch($searchType)
-        {
-            case 0:
-                foreach ($searchTerms as $key => $term) {
-                $queryBuilder
-                    //->leftJoin('AppBundle\Entity\MeEnterprise e')
-                    ->leftJoin('c.meEnterprise','e')
-                    ->orWhere('e.name LIKE :t_'.$key)
-                    ->setParameter('t_'.$key, '%'.$term.'%');
-                }
-                break;
-            case 1:
-                foreach ($searchTerms as $key => $term) {
-                $queryBuilder
-                    ->orWhere('c.breed LIKE :t_'.$key)
-                    ->setParameter('t_'.$key, '%'.$term.'%');
-                }
-                break;
-            case 2:
-                foreach ($searchTerms as $key => $term) {
-                    $queryBuilder
-                        ->leftJoin('c.linkChMedicineChMaterials','l')
-                        ->leftJoin('l.chMaterials','m')
-                        ->orWhere('m.name LIKE :t_'.$key)
-                        ->setParameter('t_'.$key, '%'.$term.'%');
-                }
-                break;
+
+        foreach ($searchTerms as $key => $term) {
+            $queryBuilder
+                ->orWhere('c.breed LIKE :t_'.$key)
+                ->setParameter('t_'.$key, '%'.$term.'%')
+            ;
         }
+
         return $queryBuilder
             ->orderBy('c.id', 'DESC')
             ->setMaxResults($limit)

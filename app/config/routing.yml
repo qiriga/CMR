@@ -20,18 +20,18 @@ app:
 ## homepage:
  #   path: /{_locale}
   #  requirements:
-   #     _locale: '%app_locales%'
-    #defaults:
-     #   _controller: FrameworkBundle:Template:template
-      #  template:    default/homepage.html.twig
-       # _locale:     '%locale%'
+  #     _locale: '%app_locales%'
+ #defaults:
+    #   _controller: FrameworkBundle:Template:template
+    #  template:    default/homepage.html.twig
+    # _locale:     '%locale%'
 
 homepage:
   path: /{_locale}
   requirements:
     _locale: '%app_locales%'
   defaults:
-    _controller: AppBundle:ChMedicine:showList
-    template: chmedicines/chmedicinedetail.html.twig
+    _controller: AppBundle:ChMedicine:searchchmedicine
+    template: chmedicines/search.html.twig
     _locale: zh_CN
     #_controller: Symfony\Bundel\FrameworkBundle\Controller\TemplateController::templateAction

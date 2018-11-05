@@ -1,27 +1,31 @@
 {% extends "base.html.twig" %}
 
 {% block main %}
+    <div><h3 class="text-center">江西省企业生产的中成药品</h3>
     <table class="table table-hover table-responsive">
-        {% for meenter in meenterpris %}
+        {#% for meenter in meenterpris %#}
         <thead>
         <tr>
-            <th colspan="1" style="text-align: center;">{{ meenter.name }} </th>
-            <th colspan="2">  生产的中成药品种类：{{ meenter.chMedicines|length }}</th>
+            <th colspan="1" style="text-align: center;"> {#{ meenter.name }#} </th>
+            <th colspan="2">  {#{ meenter.chMedicines|length }#}</th>
         </tr>
         <tr>
+            <th>序号</th>
             <th>药品名称</th>
             <th>剂型</th>
-            <th>批准文号</th>
+            <th>生产企业</th>
             <th>操  作</th>
         </tr>
         </thead>
         <tbody>
-        {%  for ch in  meenter.chMedicines %}
+        {% set counter = 0 %}
+        {%  for m in  chmedicines %}
             <tr>
-                <td>{{ ch.breed }}</td>
-                <td>{{ ch.Dosage_form }}</td>
-                <td>{{ ch.Approval_number }}</td>
-                <td><a href="{{ path('chmedicine_detail',{id:ch.id}) }}" class="btn btn-sm btn-default">
+                <td>{{ loop.index + (page-1)*10 }}</td>
+                <td>{{ m.breed }}</td>
+                <td>{{ m.Dosage_form }}</td>
+                <td>{{ m.meEnterprise.name }}</td>
+                <td><a href="{{ path('chmedicine_detail',{id:m.id}) }}" class="btn btn-sm btn-default">
                         <i class="fa fa-eye" aria-hidden="true"></i> {{ 'action.show'|trans }}
                     </a>
                     <a href="" class="btn btn-default btn-sm">
@@ -42,6 +46,13 @@
         </tr>#}
         </tbody>
 
-        {% endfor %}
     </table>
+    </div>
+        {#% endfor %#}
+
+    {% if chmedicines.haveToPaginate %}
+    <div class="navigation text-center">
+        {{ pagerfanta(chmedicines, 'twitter_bootstrap3_translated', {routeName: 'chmedicine_index_paginated'}) }}
+    </div>
+    {% endif %}
 {% endblock %}

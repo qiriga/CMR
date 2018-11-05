@@ -6,9 +6,9 @@
  * Time: 20:25
  */
 
-namespace AppBundle\Controller;
+namespace AppBundle\Controller\Admin;
 
-use AppBundle\Entity\MeEnterprise;
+
 use AppBundle\Entity\ChMedicine;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Cache;
@@ -19,14 +19,15 @@ use Symfony\Component\HttpFoundation\Request;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
 
 /**
- * @Route("/chmedicine")
+ * @Route("/admin/chmedicine")
+ * @Security("has_role('ROLE_ADMIN')")
  *
  * @author Han Qiriga <QirigaHAN@jxutcm.edu.cn>
  */
 class ChMedicineController extends Controller
 {
     /**
-     * @Route("/",defaults={"page":"1", "_format"="html"},name="chmedicine_list")
+     * @Route("/",defaults={"page":"1", "_format"="html"},name="chmedicine_index")
      * @Route("/page/{page}", defaults={"_format"="html"}, requirements={"page": "[1-9]\d*"}, name="chmedicine_index_paginated")
      * @Cache(smaxage="10")
      */
@@ -67,13 +68,11 @@ class ChMedicineController extends Controller
             }
 
         $query = $request->query->get('q', '');
-        $searchType = $request->query->get('t', '');
-
         //return $this->render('/chmedicines/abc.html.twig',array('abc'=>$query));
        // return new Response('<script>console.log('.$query.')</script>');
 
         //find('c1bbb8e7-79e1-11e8-8a01-00ffe398c4c3');
-        $chmedicines = $this->getDoctrine()->getRepository(ChMedicine::class)->findBySearchQuery($query,$searchType);
+        $chmedicines = $this->getDoctrine()->getRepository(ChMedicine::class)->findBySearchQuery($query);
 
         //echo sizeof($chmedicines);
         /*$results = [];
@@ -83,8 +82,7 @@ class ChMedicineController extends Controller
         foreach ($chmedicines as $chmedicine) {
             $results[] = [
                 'title' => htmlspecialchars($chmedicine->getBreed()),
-                'summary' => htmlspecialchars('生产企业：' . $chmedicine->getMeEnterprise()->getName()),
-                //'id' => htmlspecialchars('生产企业：'.$chmedicine->getMeEnterprise()->getId()),
+                'summary' => htmlspecialchars('生产商：'.$chmedicine->getMeEnterprise()->getName()),
                 'url' => $this->generateUrl('chmedicine_detail', ['id' => $chmedicine->getId()]),
             ];
         }

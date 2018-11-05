@@ -14,11 +14,13 @@ use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * @ORM\Entity
+ * @ORM\Entity(repositoryClass="AppBundle\Repository\MeEnterpriseRepository")
  * @ORM\Table(name="MeEnterprise")
  */
 class MeEnterprise
 {
+    const NUM_ITEMS = 10;
+
     /**
      * @ORM\Id
      * @ORM\Column(type="string",name="id") */

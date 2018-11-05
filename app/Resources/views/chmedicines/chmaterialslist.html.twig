@@ -12,7 +12,7 @@
         </tr>
         </thead>
         <tbody>
-        {%  for ma in  chmaterials %}
+        {% for ma in chmaterials %}
             <tr>
                 <td>{{ ma.name }}</td>
                 <td>{{ ma.enname}}</td>
@@ -30,6 +30,16 @@
                         {{ 'action.delete'|trans }}</a>
                 </td>
             </tr>
+        {% else %}
+            <tr><td colspan="5"><div class="well">{{ 'post.no_posts_found'|trans }}</div></td></tr>
         {% endfor %}
+
+        {% if chmaterials.haveToPaginate %}
+            <tr><td colspan="5">
+            <div class="navigation text-center">
+                {{ pagerfanta(chmaterials, 'twitter_bootstrap3_translated', {routeName: 'chmaterials_index_paginated'}) }}
+            </div>
+                </td></tr>
+        {% endif %}
     </table>
 {% endblock %}
