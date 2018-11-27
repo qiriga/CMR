@@ -1,0 +1,45 @@
+{% extends "base.html.twig" %}
+
+{% block main %}
+    {% if chmedicines %}
+        <div  class="alert alert-success" role="alert" ><mark style="background-color: #aacd4e">{{ keyword }}</mark> 的相关记录有 <mark>{{ chmedicines|length }}</mark> 条。</div>
+        {% for ch in chmedicines %}
+            <div class="col-xs-12 alert alert-info" role="alert">
+                <div class="row container-fluid subheading">
+                    <div class="col-xs-5 col-md-2 text-right panel-collapse">序号</div>
+                    <div class="col-xs-6 col-sm-6 col-md-10 text-left" >{{ loop.index }}</div>
+                </div>
+                <div class="row container-fluid subheading">
+                    <div class="col-xs-5 col-md-2 text-right panel-collapse">药品名称</div>
+                    <div class="col-xs-7 col-sm-6 col-md-10 text-left" {% if ch.breed == keyword %} class="warning" {% endif %}>{{ ch.breed }}</div>
+                </div>
+                <div class="row container-fluid">
+                    <div class="col-xs-5 col-md-2 text-right">生产企业</div>
+                    <div class="col-xs-7 col-sm-6 col-md-10" >{{ ch.meEnterprise.name }}</div>
+                </div>
+                <div class="row container-fluid ">
+                    <div class="col-xs-5 col-md-2 text-right">处方</div>
+                    <div class="col-xs-7 col-sm-6 col-md-10">
+                        {% for link in ch.linkChMedicineChMaterials  %}
+                            <mark {% if keyword in link.chMaterials.name %} style="background-color: #aacd4e" {% endif %}>{{ link.chMaterials.name }}{{ link.dosage }}{{ link.unit }}</mark>
+                        {% endfor  %}
+                    </div>
+                </div>
+            </div>
+            {#
+                    {% else %}
+                        <tr><td colspan="5"><div class="well">{{ 'post.no_posts_found'|trans }}</div></td></tr>
+                    {% endfor %}
+
+                    {% if chmaterials.haveToPaginate %}
+                        <tr><td colspan="5">
+                        <div class="navigation text-center">
+                            {{ pagerfanta(chmaterials, 'twitter_bootstrap3_translated', {routeName: 'chmaterials_index_paginated'}) }}
+                        </div>
+                            </td></tr>
+                    {% endif %}#}
+        {% endfor %}
+    {% else %}
+        <div  class="alert alert-success" role="alert" >抱歉，暂无关于<mark style="background-color: #aacd4e">{{ keyword }}</mark>的相关信息！</div>
+    {% endif %}
+{% endblock %}

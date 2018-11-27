@@ -364,6 +364,10 @@
                 <source>medicine.backlist</source>
                 <target>返回列表</target>
             </trans-unit>
+            <trans-unit id="medicine.search">
+                <source>medicine.search</source>
+                <target>搜索</target>
+            </trans-unit>
         </body>
     </file>
 </xliff>

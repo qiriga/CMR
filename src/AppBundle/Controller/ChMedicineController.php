@@ -8,7 +8,7 @@
 
 namespace AppBundle\Controller;
 
-use AppBundle\Entity\MeEnterprise;
+
 use AppBundle\Entity\ChMedicine;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Cache;
@@ -16,7 +16,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Request;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
+
 
 /**
  * @Route("/chmedicine")
@@ -54,6 +54,29 @@ class ChMedicineController extends Controller
     }
 
 
+
+
+    /**
+     * @Route("/chmedicinesearchbutton", name="chmedicine_search_button")
+     *
+     */
+    public function searchchmedicinebuttonAction(Request $request)
+    {
+        if ('POST' != $request->getMethod()) {
+            return $this->render('/chmedicines/searchbutton.html.twig');
+        }
+
+        $query = $_POST['q'];//$request->('q', '');
+        $searchType = $_POST['t'];//$request->query->get('t', '');
+        $chmedicines = $this->getDoctrine()->getRepository(ChMedicine::class)->findBySearchQuery($query,$searchType);
+        //var_dump($query,$searchType,$chmedicines);
+        return $this->render('/chmedicines/searchlist.html.twig',array('chmedicines' => $chmedicines,'keyword'=>$query));
+
+    }
+
+
+
+
     /**
      * @Route("/chmedicinesearch", name="chmedicine_search")
      * @Method("GET")
@@ -63,7 +86,7 @@ class ChMedicineController extends Controller
     public function searchchmedicineAction(Request $request)
     {
         if (!$request->isXmlHttpRequest()) {
-                return $this->render('/chmedicines/search.html.twig');
+                return $this->render('/chmedicines/searchbutton.html.twig');
             }
 
         $query = $request->query->get('q', '');

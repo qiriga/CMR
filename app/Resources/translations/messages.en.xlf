@@ -359,6 +359,16 @@
                 <source>rss.description</source>
                 <target>Most recent posts published on the Symfony Demo blog</target>
             </trans-unit>
+
+
+            <trans-unit id="medicine.backlist">
+                <source>medicine.backlist</source>
+                <target>back to list</target>
+            </trans-unit>
+            <trans-unit id="medicine.search">
+                <source>medicine.search</source>
+                <target>Search</target>
+            </trans-unit>
         </body>
     </file>
 </xliff>

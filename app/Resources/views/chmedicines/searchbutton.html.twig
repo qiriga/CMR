@@ -1,13 +1,10 @@
 {% extends 'base.html.twig' %}
 
-{% block javascripts %}
-    {{ parent() }}
-    <script src="{{ asset('build/js/search.js') }}"></script>
-{% endblock %}
+
 
 {% block main %}
     <h1 class="center-block text-center">江西省中成药数据库</h1>
-    <form action="{{ path('chmedicine_search') }}" method="get">
+        <form action="{{ path('chmedicine_search_button') }}" method="post">
         <div class="form-group">
             <select name="t" class="form-control" style="width:120px;color: rebeccapurple;">
                 <option value="0" selected>企业</option>
@@ -15,7 +12,8 @@
                 <option value="2">药材</option>
             </select>
             </br>
-            <input name="q" type="text" class="form-control search-field" placeholder="{{ 'post.search_for'|trans }}" autocomplete="off" autofocus>
+            <input name="q" type="text" class="form-control search-field" style="display: inline;width: 80%;" placeholder="{{ 'post.search_for'|trans }}" autocomplete="off" autofocus>
+            <button type="submit" class="btn btn-group-sm"><i class="fa fa-search" aria-hidden="true"></i>{{ 'medicine.search'|trans }}</button>
         </div>
     </form>
 
