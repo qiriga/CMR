@@ -28,62 +28,38 @@
 
         {% block header %}
             <header>
-
-                <nav class="navbar fixed-top navbar-expand-lg navbar-dark info-color">
-                    <a class="navbar-brand" href="#">Navbar</a>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav mr-auto">
-                            <li class="nav-item active">
-                                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Features</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Pricing</a>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown
-                                </a>
-                                <div class="dropdown-menu dropdown-info" aria-labelledby="navbarDropdownMenuLink">
-                                    <a class="dropdown-item" href="#">Action</a>
-                                    <a class="dropdown-item" href="#">Another action</a>
-                                    <a class="dropdown-item" href="#">Something else here</a>
-                                </div>
-                            </li>
-                        </ul>
-                        <form class="form-inline">
-                            <div class="md-form my-0">
-                                <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-                            </div>
-                        </form>
+                <!--Navbar
+                <nav class="navbar navbar-dark default-color">-->
+                <nav class="navbar fixed-top navbar-light blue lighten-4">
+                    <div class="row w-75">
+                        <div class="col-sm-3 white-text align-top"><a class="navbar-brand light-blue-text" href="#">江西省中成药数据库</a></div>
+                        <div class="border-left-0 col-xl-8 col-sm-9 col-md-8 col-lg-8">
+                            <form class="form-inline border-left-0 text-left">
+                                <select class="browser-default custom-select ">
+                                    <option selected>select menu</option>
+                                    <option value="0">企业</option>
+                                    <option value="1">品种</option>
+                                    <option value="2">药材</option>
+                                </select>
+                                <input class="form-control form-control-static ml-2 w-50 " type="search" placeholder="{{ 'post.search_for'|trans }}" aria-label="Search">
+                                <button class="btn btn-outline-white btn-md my-2 my-sm-0 ml-3" type="submit">{{ 'menu.search'|trans }}</button>
+                            </form>
+                        </div>
                     </div>
                 </nav>
-
+                <!--/.Navbar-->
 
             </header>
         {% endblock %}
 
-        <div class="container body-container" style="align: center;">
+        <div class=" row mt-5 pt-4" >
             {% block body %}
-                    <div  id="main" class="col-sm-12">
+                    <div  id="main" class="col-xl-10 col-sm-6  mx-auto col-sm-auto">
                         {{ include('default/_flash_messages.html.twig') }}
 
                         {% block main %}{% endblock %}
                     </div>
 
-                    {#<div id="sidebar" class="col-sm-3">
-                        {% block sidebar %}
-                            {{ render_esi(controller('FrameworkBundle:Template:template', {
-                                'template': 'blog/about.html.twig',
-                                'sharedAge': 600,
-                                '_locale': app.request.locale
-                            })) }}
-                        {% endblock %}
-                    </div>#}
             {% endblock %}
         </div>
 
@@ -91,11 +67,11 @@
             <footer>
                 <div class="container">
                     <div class="row">
-                        <div id="footer-copyright" class="col-md-6">
+                        <div id="footer-copyright" class="col-md-10">
                             <p>&copy; {{ 'now'|date('Y') }} - 鼎石互联网工作室  18607912861</p>
                             <p>{{ 'mit_license'|trans }}</p>
                         </div>
-                        <div id="footer-resources" class="col-md-6">
+                        <div id="footer-resources" class="col-md-2">
                             <p>
                                 <a href="https://twitter.com/symfony" title="Symfony Twitter">
                                     <i class="fa fa-twitter" aria-hidden="true"></i>

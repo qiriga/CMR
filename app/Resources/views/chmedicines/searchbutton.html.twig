@@ -1,22 +1,33 @@
-{% extends 'base.html.twig' %}
+{# {% extends 'base.html.twig' %}#}
 
 
-
+{% block stylesheets %}
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="{{ asset('build/css/font-awesome.min.css')}}">
+    <!-- Bootstrap core CSS -->
+    <link href="{{ asset('build/css/bootstrap.min.css')}}" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="{{ asset('build/css/mdb.min.css')}}" rel="stylesheet">
+    <!-- Your custom styles (optional) -->
+    <link href="{{ asset('build/css/style.css')}}" rel="stylesheet">
+{% endblock %}
 {% block main %}
-    <h1 class="center-block text-center">江西省中成药数据库</h1>
-        <form action="{{ path('chmedicine_search_button') }}" method="post">
-        <div class="form-group">
-            <select name="t" class="form-control" style="width:120px;color: rebeccapurple;">
-                <option value="0" selected>企业</option>
-                <option value="1">品种</option>
-                <option value="2">药材</option>
-            </select>
-            </br>
-            <input name="q" type="text" class="form-control search-field" style="display: inline;width: 80%;" placeholder="{{ 'post.search_for'|trans }}" autocomplete="off" autofocus>
-            <button type="submit" class="btn btn-group-sm"><i class="fa fa-search" aria-hidden="true"></i>{{ 'medicine.search'|trans }}</button>
+    <div class="flex-center flex-column  row ">
+        <div class="w-75 p-3"><h1 class="center-block text-center">江西省中成药数据库</h1></div>
+        <div class="w-50 mw-100 p-3">
+            <form class="form-autocomplete" action="{{ path('chmedicine_search_button') }}" method="post">
+                <div class="input-group form-sm w-100 p-3">
+                    <select name="t" class="form-control col-md-2 col-sm-2 col-xl-2" style="min-width:20px;color: rebeccapurple;">
+                        <option value="0" selected>企业</option>
+                        <option value="1">品种</option>
+                        <option value="2">药材</option>
+                    </select>
+                    <input name="q" class="form-control py-1 col-md-8 col-sm-8 col-xl-8" type="text" style="min-width: 80px;" placeholder="{{ 'post.search_for'|trans }}"  aria-label="Search">
+                    <div class="input-group-append">
+                        <button type="submit" class="input-group-text amber lighten-3"><i class="fa fa-search" aria-hidden="true"></i>{{ 'medicine.search'|trans }}</button>
+                    </div>
+                </div>
+            </form>
         </div>
-    </form>
-
-    <div id="results">
     </div>
 {% endblock %}
