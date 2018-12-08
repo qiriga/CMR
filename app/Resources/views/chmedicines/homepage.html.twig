@@ -1,0 +1,70 @@
+{# {% extends 'base.html.twig' %}#}
+
+
+<!DOCTYPE html>
+<html lang="{{ app.request.locale }}">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>{% block title %}江西省中成药数据库{% endblock %}</title>
+    <link rel="alternate" type="application/rss+xml" title="{{ 'rss.title'|trans }}" href="{{ path('blog_rss') }}">
+    {% block stylesheets %}
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="{{ asset('build/css/font-awesome.min.css')}}">
+    <!-- Bootstrap core CSS -->
+    <link href="{{ asset('build/css/bootstrap.min.css')}}" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="{{ asset('build/css/mdb.min.css')}}" rel="stylesheet">
+    <!-- Your custom styles (optional) -->
+    <link href="{{ asset('build/css/style.css')}}" rel="stylesheet">
+
+    {% endblock %}
+
+    <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+</head>
+{% block main %}
+    <body>
+    <header>
+
+    </header>
+    <main>
+        <!--Mask-->
+        <div id="intro" class="view">
+
+            <div class="mask rgba-black-strong">
+                <div class="container-fluid h-100" >
+                    <div class="row justify-content-md-center h-50 align-items-end">
+                        <div class="col col-xs-12 col-sm-10 col-md-10 col-lg-10 text-center ">
+                           <h1 class="font-weight-bold white-text pt-5 mb-2">江西省中成药数据库</h1>
+                        </div>
+                    </div>
+                    <p></p>
+                    <div class="row justify-content-md-center row-centered" style="background-color: #aacd4e;">
+                        <div class="col col-xs-12 col-md-8" style="background-color: blue;align-items: center;">
+                            <form class="form-inline" action="{{ path('chmedicine_search_button') }}" method="post" style="background-color: #0a4b3e;">
+                                <div class="input-group w-100 text-center mr-1" style="background-color: red;">
+                                    <div class="hidden col col-xs-0 col-sm-0 col-lg-1 col-xl-2" ></div>
+                                    <select name="t" class="form-control input-group" style="width:15%;min-width:75px!important;max-width:100px!important;color: rebeccapurple;">
+                                        <option value="0" selected>企业</option>
+                                        <option value="1">品种</option>
+                                        <option value="2">药材</option>
+                                    </select>
+                                    <input name="q" class="form-control py-1" type="text" style="width:50%;min-width:100px!important;max-width:480px;" placeholder="{{ 'post.search_for'|trans }}"  aria-label="Search">
+                                    <button type="submit" class="form-control input-group-append input-group-text amber lighten-3" style="width:15%;min-width:80px;max-width: 100px;">
+                                        <i class="fa fa-search" aria-hidden="true"></i>&nbsp;&nbsp;{{ 'medicine.search'|trans }}
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--/.Mask-->
+    </main>
+    <footer>
+    </footer>
+    </body>
+{% endblock %}
+</body>
+</html>

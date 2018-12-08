@@ -63,7 +63,7 @@ class ChMedicineController extends Controller
     public function searchchmedicinebuttonAction(Request $request)
     {
         if ('POST' != $request->getMethod()) {
-            return $this->render('/chmedicines/searchbutton.html.twig');
+            return $this->render('/chmedicines/homepage.html.twig');
         }
 
         $query = $_POST['q'];//$request->('q', '');
@@ -86,7 +86,7 @@ class ChMedicineController extends Controller
     public function searchchmedicineAction(Request $request)
     {
         if (!$request->isXmlHttpRequest()) {
-                return $this->render('/chmedicines/searchbutton.html.twig');
+                return $this->render('/chmedicines/homepage.html.twig');
             }
 
         $query = $request->query->get('q', '');
