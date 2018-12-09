@@ -30,20 +30,19 @@
     <main>
         <!--Mask-->
         <div id="intro" class="view">
-
             <div class="mask rgba-black-strong">
                 <div class="container-fluid h-100" >
                     <div class="row justify-content-md-center h-50 align-items-end">
-                        <div class="col col-xs-12 col-sm-10 col-md-10 col-lg-10 text-center ">
+                        <div class="col col-xs-12 col-sm-10 col-md-8 col-lg-10 text-center ">
                            <h1 class="font-weight-bold white-text pt-5 mb-2">江西省中成药数据库</h1>
                         </div>
                     </div>
                     <p></p>
-                    <div class="row justify-content-md-center row-centered" style="background-color: #aacd4e;">
-                        <div class="col col-xs-12 col-md-8" style="background-color: blue;align-items: center;">
-                            <form class="form-inline" action="{{ path('chmedicine_search_button') }}" method="post" style="background-color: #0a4b3e;">
-                                <div class="input-group w-100 text-center mr-1" style="background-color: red;">
-                                    <div class="hidden col col-xs-0 col-sm-0 col-lg-1 col-xl-2" ></div>
+                    <div id="searchform" class="row justify-content-md-center row-centered">
+                        <div class="col col-xs-12 col-md-8" style="align-items: center;">
+                            <form class="form-inline" action="{{ path('chmedicine_search_button') }}" method="post" >
+                                <div class="input-group w-100 text-center mr-1" >
+                                    <div id="usefullspace" class="hidden col" ></div>
                                     <select name="t" class="form-control input-group" style="width:15%;min-width:75px!important;max-width:100px!important;color: rebeccapurple;">
                                         <option value="0" selected>企业</option>
                                         <option value="1">品种</option>
@@ -57,7 +56,15 @@
                             </form>
                         </div>
                     </div>
+                    <div id ="pull-down" class="row align-items-end justify-content-md-center " >
+                        <div class="col text-center">
+                            <p class="white-text my-4">&copy; {{ 'now'|date('Y') }} - 鼎石互联网工作室<br>
+                            {{ 'mit_license'|trans }}</p>
+                        </div>
+                    </div>
+
                 </div>
+                <!--Container end-->
             </div>
         </div>
         <!--/.Mask-->
@@ -67,4 +74,42 @@
     </body>
 {% endblock %}
 </body>
+
+<script type="text/javascript" src="{{ asset('build/js/jquery-3.3.1.min.js') }}"></script>
+<script language="JavaScript" type="application/javascript">
+    $(document).ready(function(){
+        var sw = $(window).width();//获取屏幕宽度
+        console.log(sw);
+        if( sw >= 768){
+            if(sw >= 1200){
+                if(sw > 1440){
+                    $("#usefullspace").addClass("col-xl-3");
+                    return;
+                }
+                $("#usefullspace").addClass("col-xl-2");
+                return;
+            }else if( sw >= 992){
+                $("#usefullspace").addClass("col-lg-2");
+                return;
+            }
+            $("#usefullspace").addClass("col-md-2");
+            return;
+        }else if( sw>=576 ){
+            $("#usefullspace").addClass("col-sm-5");
+            return;
+        }
+        else{
+            $("#usefullspace").remove();
+            return;
+        }
+        //$('html').css('font-size', f+'px');
+    });
+
+
+    $('#pull-down').each(function() {
+        var $this = $(this);
+        $this.css('margin-top', $this.parent().height()*0.5 - $("#searchform").height() - $this.height());
+        console.log("this is height:"+$this.parent().height());
+    });
+</script>
 </html>

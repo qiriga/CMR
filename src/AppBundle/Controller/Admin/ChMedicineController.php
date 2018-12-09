@@ -27,6 +27,15 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
 class ChMedicineController extends Controller
 {
     /**
+     * @Route("/dashboard",name="dashboard")
+     */
+    function dashboardAction()
+    {
+        return $this->render('/admin/dashboard.twig');
+    }
+
+
+    /**
      * @Route("/",defaults={"page":"1", "_format"="html"},name="chmedicine_index")
      * @Route("/page/{page}", defaults={"_format"="html"}, requirements={"page": "[1-9]\d*"}, name="chmedicine_index_paginated")
      * @Cache(smaxage="10")
