@@ -32,92 +32,73 @@
                 <nav class="navbar navbar-dark default-color">-->
                 <nav class="navbar navbar-expand-lg navbar-dark primary-color fixed-top">
                 <div class="container">
-
-                        <!-- Navbar brand -->
+                 <!-- Navbar brand -->
                 <a class="navbar-brand" href="{{ path('homepage') }}">江西省中成药数据库</a>
 
                 <!-- Collapsible content -->
                 <div class="collapse navbar-collapse" id="basicExampleNav">
 
                     <!-- Links -->
-                    <ul class="navbar-nav mr-auto">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="#">首页
-                                <span class="sr-only">(current)</span>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Features</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Pricing</a>
-                        </li>
+                    <ul class="navbar-nav mr-auto w-75" style="background-color: yellow;">
 
                         <!-- Dropdown -->
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
-                               aria-expanded="false">Dropdown</a>
-                            <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
-                                <a class="dropdown-item" href="#">企业</a>
-                                <a class="dropdown-item" href="#">品种</a>
-                                <a class="dropdown-item" href="#">药材</a>
-                            </div>
+                        <li class="nav-item active">
+                            <select name="t" class="form-control input-group" style="width:15%;min-width:80px!important;max-width:100px!important;color: rebeccapurple;">
+                                <option value="0" selected>企业</option>
+                                <option value="1">品种</option>
+                                <option value="2">药材</option>
+                            </select>
                         </li>
-
+                        <li class="nav-item">
+                            <form class="form-inline left">
+                                <div class="md-form my-0">
+                                    <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+                                </div>
+                                <button class="btn btn-outline-white btn-md my-2 my-sm-0 ml-3" type="submit">Search</button>
+                            </form>
+                        </li>
                     </ul>
-                    <!-- Links -->
-
-                    <form class="form-inline">
-                        <div class="md-form my-0">
-                            <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-                        </div>
-                        <button class="btn btn-outline-white btn-md my-2 my-sm-0 ml-3" type="submit">Search</button>
-                    </form>
+                    <!--/Link -->
                 </div>
                 <!-- Collapsible content -->
 
                 </div>
+                </nav>
                 <!--/.Navbar-->
             </header>
         {% endblock %}
         <main>
-            <div class="container" >
-                <div class="row mt-5 pt-4">
-                    {% block body %}
-                            <div  id="main">
-                                {{ include('default/_flash_messages.html.twig') }}
+            <div class="container">
+                {% block main %}
 
-                                {% block main %}{% endblock %}
-                            </div>
 
-                    {% endblock %}
-                </div>
+                {% endblock %}
             </div>
         </main>
         {% block footer %}
-            <footer>
-                <div class="container">
-                    <div class="row">
-                        <div id="footer-copyright" class="col-md-10">
-                            <p>&copy; {{ 'now'|date('Y') }} - 鼎石互联网工作室  18607912861</p>
-                            <p>{{ 'mit_license'|trans }}</p>
-                        </div>
-                        <div id="footer-resources" class="col-md-2">
-                            <p>
-                                <a href="https://twitter.com/symfony" title="Symfony Twitter">
-                                    <i class="fa fa-twitter" aria-hidden="true"></i>
-                                </a>
-                                <a href="https://www.facebook.com/SensioLabs" title="SensioLabs Facebook">
-                                    <i class="fa fa-facebook" aria-hidden="true"></i>
-                                </a>
-                                <a href="https://symfony.com/blog/" title="Symfony Blog">
-                                    <i class="fa fa-rss" aria-hidden="true"></i>
-                                </a>
-                            </p>
-                        </div>
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-10">
+                        <p>&copy; {{ 'now'|date('Y') }} - 鼎石互联网工作室  18607912861</p>
+                        <p>{{ 'mit_license'|trans }}</p>
+                    </div>
+                    <div id="footer-resources" class="col-md-2">
+                        <p>
+                            <a href="https://twitter.com/symfony" title="Symfony Twitter">
+                                <i class="fa fa-twitter" aria-hidden="true"></i>
+                            </a>
+                            <a href="https://www.facebook.com/SensioLabs" title="SensioLabs Facebook">
+                                <i class="fa fa-facebook" aria-hidden="true"></i>
+                            </a>
+                            <a href="https://symfony.com/blog/" title="Symfony Blog">
+                                <i class="fa fa-rss" aria-hidden="true"></i>
+                            </a>
+                        </p>
                     </div>
                 </div>
-            </footer>
+            </div>
+        </footer>
         {% endblock %}
 
         {% block javascripts %}

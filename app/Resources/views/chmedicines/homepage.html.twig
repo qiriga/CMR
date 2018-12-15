@@ -40,19 +40,16 @@
                     <p></p>
                     <div id="searchform" class="row justify-content-md-center row-centered">
                         <div class="col col-xs-12 col-md-8" style="align-items: center;">
-                            <form class="form-inline" action="{{ path('chmedicine_search_button') }}" method="post" >
-                                <div class="input-group w-100 text-center mr-1" >
-                                    <div id="usefullspace" class="hidden col" ></div>
+                            <form id="sform" class="form-inline input-group w-100" action="{{ path('chmedicine_search_button') }}" method="post" >
                                     <select name="t" class="form-control input-group" style="width:15%;min-width:75px!important;max-width:100px!important;color: rebeccapurple;">
                                         <option value="0" selected>企业</option>
                                         <option value="1">品种</option>
                                         <option value="2">药材</option>
                                     </select>
-                                    <input name="q" class="form-control py-1" type="text" style="width:50%;min-width:100px!important;max-width:480px;" placeholder="{{ 'post.search_for'|trans }}"  aria-label="Search">
-                                    <button type="submit" class="form-control input-group-append input-group-text amber lighten-3" style="width:15%;min-width:80px;max-width: 100px;">
+                                    <input name="q" class="form-control" type="text" style="width:50%;min-width:100px!important;max-width:480px;" placeholder="{{ 'post.search_for'|trans }}"  aria-label="Search">
+                                    <button type="submit" class="form-control input-group-append input-group-text amber lighten-3" style="width:15%;min-width:80px;max-width: 100px; ">
                                         <i class="fa fa-search" aria-hidden="true"></i>&nbsp;&nbsp;{{ 'medicine.search'|trans }}
                                     </button>
-                                </div>
                             </form>
                         </div>
                     </div>
@@ -78,9 +75,24 @@
 <script type="text/javascript" src="{{ asset('build/js/jquery-3.3.1.min.js') }}"></script>
 <script language="JavaScript" type="application/javascript">
     $(document).ready(function(){
-        var sw = $(window).width();//获取屏幕宽度
-        console.log(sw);
-        if( sw >= 768){
+        //var sw = $(window).width();//获取屏幕宽度
+        var sw = $("#sform").width();
+        var ss= $("#sform select").width();
+        var si= $("#sform input").width();
+        var sb= $("#sform button").width();
+        var sf = ss+si+sb;
+        console.log("sw"+sw);
+        //$("#sform").css({"margin-left":(sw-sf)*0.5,"width":sf,"min-width":255});
+
+        $("#sform").css({"width":sf,"min-width":255});
+        $("#sform select").css({"margin-left":(sw-sf)*0.5-30});
+        console.log("sform="+$("#sform").width());
+        console.log(ss);
+        console.log(si);
+        console.log(sb);
+        console.log(sf);
+        console.log((sw-sf)/2);
+        /*if( sw >= 768){
             if(sw >= 1200){
                 if(sw > 1440){
                     $("#usefullspace").addClass("col-xl-3");
@@ -101,7 +113,7 @@
         else{
             $("#usefullspace").remove();
             return;
-        }
+        }*/
         //$('html').css('font-size', f+'px');
     });
 
@@ -109,7 +121,7 @@
     $('#pull-down').each(function() {
         var $this = $(this);
         $this.css('margin-top', $this.parent().height()*0.5 - $("#searchform").height() - $this.height());
-        console.log("this is height:"+$this.parent().height());
+        //console.log("this is height:"+$this.parent().height());
     });
 </script>
 </html>
