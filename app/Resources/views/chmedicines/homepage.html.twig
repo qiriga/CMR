@@ -10,11 +10,13 @@
     <link rel="alternate" type="application/rss+xml" title="{{ 'rss.title'|trans }}" href="{{ path('blog_rss') }}">
     {% block stylesheets %}
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="{{ asset('build/css/font-awesome.min.css')}}">
+    <link rel="stylesheet" href="{{ asset('build/css/mdb/font-awesome.min.css')}}">
     <!-- Bootstrap core CSS -->
-    <link href="{{ asset('build/css/bootstrap.min.css')}}" rel="stylesheet">
+    <link href="{{ asset('build/css/bootstrap/bootstrap.min.css')}}" rel="stylesheet">
     <!-- Material Design Bootstrap -->
-    <link href="{{ asset('build/css/mdb.min.css')}}" rel="stylesheet">
+    <link href="{{ asset('build/css/mdb/mdb.min.css')}}" rel="stylesheet">
+    <!-- sb-admin -->
+    <link href="{{ asset('build/css/sb-admin/sb-admin.css')}}" rel="stylesheet">
     <!-- Your custom styles (optional) -->
     <link href="{{ asset('build/css/style.css')}}" rel="stylesheet">
 
@@ -53,10 +55,11 @@
                             </form>
                         </div>
                     </div>
-                    <div id ="pull-down" class="row align-items-end justify-content-md-center " >
-                        <div class="col text-center">
-                            <p class="white-text my-4">&copy; {{ 'now'|date('Y') }} - 鼎石互联网工作室<br>
-                            {{ 'mit_license'|trans }}</p>
+                    <div id ="pull-down" class="row align-items-end justify-content-md-center " style="position: absolute; right: 0; bottom: 0;left: 0; padding: 1rem;">
+                        <div class="col text-center footer-copyright text-center py-3 white-text small">
+                                <p>&copy; {{ 'now'|date('Y') }} Copyright :
+                                    <a href="https://mdbootstrap.com/education/bootstrap/" class="white-text">鼎石互联网工作室</a></p>
+                                <p>{{ 'mit_license'|trans }}</p>
                         </div>
                     </div>
 
@@ -119,8 +122,8 @@
 
 
     $('#pull-down').each(function() {
-        var $this = $(this);
-        $this.css('margin-top', $this.parent().height()*0.5 - $("#searchform").height() - $this.height());
+        //var $this = $(this);
+        //$this.css('margin-top', $this.parent().height()*0.5 - $("#searchform").height() - $this.height());
         //console.log("this is height:"+$this.parent().height());
     });
 </script>
