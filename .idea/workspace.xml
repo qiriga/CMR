@@ -1,171 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e0b3b563-3826-4688-be1c-d3d820685519" name="Default" comment="cm version 2.1">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/build/css/addons/datatables.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/build/css/addons/datatables.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/build/css/mdb/font-awesome.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/build/css/mdb/mdb.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/build/css/mdb/mdb.lite.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/build/css/mdb/mdb.lite.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/build/css/mdb/mdb.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/build/css/modules/animations-extended.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/build/css/modules/animations-extended.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/build/css/modules/bootstrap/scss/_alert.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/build/css/modules/bootstrap/scss/_badge.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/build/css/modules/bootstrap/scss/_breadcrumb.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/build/css/modules/bootstrap/scss/_button-group.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/build/css/modules/bootstrap/scss/_buttons.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/build/css/modules/bootstrap/scss/_card.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/build/css/modules/bootstrap/scss/_carousel.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/build/css/modules/bootstrap/scss/_close.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/build/css/modules/bootstrap/scss/_code.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/build/css/modules/bootstrap/scss/_custom-forms.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/build/css/modules/bootstrap/scss/_dropdown.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/build/css/modules/bootstrap/scss/_forms.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/build/css/modules/bootstrap/scss/_functions.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/build/css/modules/bootstrap/scss/_grid.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/build/css/modules/bootstrap/scss/_images.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/build/css/modules/bootstrap/scss/_input-group.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/build/css/modules/bootstrap/scss/_jumbotron.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/build/css/modules/bootstrap/scss/_list-group.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/build/css/modules/bootstrap/scss/_media.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/build/css/modules/bootstrap/scss/_mixins.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/build/css/modules/bootstrap/scss/_modal.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/build/css/modules/bootstrap/scss/_nav.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/build/css/modules/bootstrap/scss/_navbar.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/build/css/modules/bootstrap/scss/_pagination.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/build/css/modules/bootstrap/scss/_popover.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/build/css/modules/bootstrap/scss/_print.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/build/css/modules/bootstrap/scss/_progress.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/build/css/modules/bootstrap/scss/_reboot.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/build/css/modules/bootstrap/scss/_root.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/build/css/modules/bootstrap/scss/_tables.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/build/css/modules/bootstrap/scss/_tooltip.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/build/css/modules/bootstrap/scss/_transitions.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/build/css/modules/bootstrap/scss/_type.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/build/css/modules/bootstrap/scss/_utilities.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/build/css/modules/bootstrap/scss/_variables.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/build/css/modules/bootstrap/scss/bootstrap-grid.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/build/css/modules/bootstrap/scss/bootstrap-reboot.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/build/css/modules/bootstrap/scss/bootstrap.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/build/css/modules/bootstrap/scss/mixins/_alert.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/build/css/modules/bootstrap/scss/mixins/_background-variant.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/build/css/modules/bootstrap/scss/mixins/_badge.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/build/css/modules/bootstrap/scss/mixins/_border-radius.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/build/css/modules/bootstrap/scss/mixins/_box-shadow.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/build/css/modules/bootstrap/scss/mixins/_breakpoints.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/build/css/modules/bootstrap/scss/mixins/_buttons.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/build/css/modules/bootstrap/scss/mixins/_caret.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/build/css/modules/bootstrap/scss/mixins/_clearfix.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/build/css/modules/bootstrap/scss/mixins/_float.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/build/css/modules/bootstrap/scss/mixins/_forms.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/build/css/modules/bootstrap/scss/mixins/_gradients.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/build/css/modules/bootstrap/scss/mixins/_grid-framework.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/build/css/modules/bootstrap/scss/mixins/_grid.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/build/css/modules/bootstrap/scss/mixins/_hover.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/build/css/modules/bootstrap/scss/mixins/_image.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/build/css/modules/bootstrap/scss/mixins/_list-group.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/build/css/modules/bootstrap/scss/mixins/_lists.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/build/css/modules/bootstrap/scss/mixins/_nav-divider.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/build/css/modules/bootstrap/scss/mixins/_navbar-align.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/build/css/modules/bootstrap/scss/mixins/_pagination.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/build/css/modules/bootstrap/scss/mixins/_reset-text.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/build/css/modules/bootstrap/scss/mixins/_resize.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/build/css/modules/bootstrap/scss/mixins/_screen-reader.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/build/css/modules/bootstrap/scss/mixins/_size.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/build/css/modules/bootstrap/scss/mixins/_table-row.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/build/css/modules/bootstrap/scss/mixins/_text-emphasis.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/build/css/modules/bootstrap/scss/mixins/_text-hide.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/build/css/modules/bootstrap/scss/mixins/_text-truncate.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/build/css/modules/bootstrap/scss/mixins/_transition.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/build/css/modules/bootstrap/scss/mixins/_visibility.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/build/css/modules/bootstrap/scss/utilities/_align.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/build/css/modules/bootstrap/scss/utilities/_background.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/build/css/modules/bootstrap/scss/utilities/_borders.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/build/css/modules/bootstrap/scss/utilities/_clearfix.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/build/css/modules/bootstrap/scss/utilities/_display.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/build/css/modules/bootstrap/scss/utilities/_embed.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/build/css/modules/bootstrap/scss/utilities/_flex.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/build/css/modules/bootstrap/scss/utilities/_float.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/build/css/modules/bootstrap/scss/utilities/_position.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/build/css/modules/bootstrap/scss/utilities/_screenreaders.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/build/css/modules/bootstrap/scss/utilities/_sizing.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/build/css/modules/bootstrap/scss/utilities/_spacing.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/build/css/modules/bootstrap/scss/utilities/_text.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/build/css/modules/bootstrap/scss/utilities/_visibility.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/build/css/sb-admin/sb-admin.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/build/css/sb-admin/sb-admin.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/build/css/style.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/build/css/style.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/build/js/addons/datatables.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/build/js/addons/datatables.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/build/js/angularjs/angular-animate.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/build/js/angularjs/angular-aria.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/build/js/angularjs/angular-material.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/build/js/angularjs/angular-messages.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/build/js/angularjs/angular-route.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/build/js/angularjs/angular-sanitize.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/build/js/angularjs/angular.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/build/js/angularjs/angular.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/build/js/bootstrap.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/build/js/bootstrap.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/build/js/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/build/js/jquery-3.3.1.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/build/js/mdb.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/build/js/mdb.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/build/js/modules/chart.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/build/js/modules/enhanced-modals.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/build/js/modules/forms-free.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/build/js/modules/jquery.easing.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/build/js/modules/scrolling-navbar.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/build/js/modules/velocity.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/build/js/modules/velocity.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/build/js/modules/waves.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/build/js/modules/wow.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/build/js/my-js.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/build/js/popper.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/build/js/svg-assets-cache.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/build/scss/_custom-styles.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/build/scss/_custom-variables.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/build/scss/addons/_datatables.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/build/scss/core/_colors.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/build/scss/core/_global.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/build/scss/core/_helpers.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/build/scss/core/_masks.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/build/scss/core/_mixins.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/build/scss/core/_typography.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/build/scss/core/_variables.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/build/scss/core/_waves.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/build/scss/core/bootstrap/_functions.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/build/scss/core/bootstrap/_variables.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/build/scss/free/_animations-basic.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/build/scss/free/_badges.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/build/scss/free/_buttons.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/build/scss/free/_cards.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/build/scss/free/_carousels.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/build/scss/free/_depreciated.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/build/scss/free/_dropdowns.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/build/scss/free/_footers.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/build/scss/free/_forms.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/build/scss/free/_input-group.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/build/scss/free/_list-group.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/build/scss/free/_loader.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/build/scss/free/_modals.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/build/scss/free/_msc.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/build/scss/free/_navbars.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/build/scss/free/_pagination.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/build/scss/free/_steppers.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/build/scss/free/_switch.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/build/scss/free/_tables.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/build/scss/free/modules/animations-extended/_module.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/build/scss/free/modules/animations-extended/animations-extended.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/build/scss/mdb.lite.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/build/scss/mdb.scss" />
+    <list default="true" id="e0b3b563-3826-4688-be1c-d3d820685519" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/build/img/lushan.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/build/css/bootstrap/bootstrap-grid.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/build/css/bootstrap/bootstrap-grid.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/build/css/bootstrap/bootstrap-reboot.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/build/css/bootstrap/bootstrap-reboot.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/build/css/bootstrap/bootstrap.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/build/css/bootstrap/bootstrap.css.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/build/css/bootstrap/bootstrap.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/build/css/bootstrap/bootstrap.min.css.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/build/js/bootstrap/js/bootstrap.bundle.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/build/js/bootstrap/js/bootstrap.bundle.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/build/js/bootstrap/js/bootstrap.bundle.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/build/js/bootstrap/js/bootstrap.bundle.min.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/build/js/bootstrap/js/bootstrap.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/build/js/bootstrap/js/bootstrap.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/build/js/bootstrap/js/bootstrap.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/build/js/bootstrap/js/bootstrap.min.js.map" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/baseBackup.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/baseBackup.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/chmedicines/homepage.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/chmedicines/homepage.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/chmedicines/searchlist.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/chmedicines/searchlist.html.twig" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -194,7 +48,10 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1403">
               <caret line="72" column="118" lean-forward="false" selection-start-line="72" selection-start-column="118" selection-end-line="72" selection-end-column="118" />
-              <folding />
+              <folding>
+                <element signature="e#6#84#0#PHP" expanded="false" />
+                <element signature="e#120#152#0#PHP" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -469,32 +326,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CM" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CM" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="build" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bootstrap" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -970,7 +801,7 @@
       <workItem from="1544840838546" duration="2929000" />
       <workItem from="1544931964759" duration="464000" />
       <workItem from="1545024710121" duration="10902000" />
-      <workItem from="1545095618909" duration="26000" />
+      <workItem from="1545095618909" duration="1046000" />
     </task>
     <task id="LOCAL-00001" summary="Initialization">
       <created>1522540351193</created>
@@ -1077,11 +908,18 @@
       <option name="project" value="LOCAL" />
       <updated>1544870241349</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="cm version 2.1">
+      <created>1545095936985</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1545095936985</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="491797000" />
+    <option name="totallyTimeSpent" value="492817000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1095,7 +933,7 @@
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25514138" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25514138" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32884097" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32479784" sideWeight="0.50385606" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32969153" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1455,7 +1293,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1403">
           <caret line="72" column="118" lean-forward="false" selection-start-line="72" selection-start-column="118" selection-end-line="72" selection-end-column="118" />
-          <folding />
+          <folding>
+            <element signature="e#6#84#0#PHP" expanded="false" />
+            <element signature="e#120#152#0#PHP" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
