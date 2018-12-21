@@ -1,0 +1,888 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>江西省中成药数据库</title>
+    <link rel="alternate" type="application/rss+xml" title="Symfony Demo blog" href="/en/blog/rss.xml">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="build/css/mdb/font-awesome.min.css">
+    <!-- Bootstrap core CSS -->
+    <link href="build/css/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="build/css/mdb/mdb.min.css" rel="stylesheet">
+    <!-- sb-admin -->
+    <link href="build/css/sb-admin/sb-admin.css" rel="stylesheet">
+    <!-- Your custom styles (optional) -->
+    <link href="build/css/style.css" rel="stylesheet">
+
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+</head>
+
+<body id="">
+
+<header style="position: relative;">
+    <!--Navbar-->
+    <nav class="navbar navbar-expand-lg navbar-dark primary-color fixed-top">
+        <div class="container">
+            <!-- Navbar brand -->
+            <a class="navbar-brand" href="/en">江西省中成药数据库</a>
+            <!-- Collapsible content -->
+            <div class="collapse navbar-collapse" id="basicExampleNav">
+                <!-- Links -->
+                <ul class="navbar-nav mr-auto w-100">
+                    <!-- Dropdown -->
+                    <li class="nav-item active w-100" >
+                        <form id="sform" class="form-inline input-group w-100" action="/en/chmedicine/chmedicinesearchbutton" method="post" >
+                            <select name="t" class="form-control input-group" style="width:15%;min-width:75px!important;max-width:100px!important;color: rebeccapurple;">
+                                <option value="0" selected>企业</option>
+                                <option value="1">品种</option>
+                                <option value="2">药材</option>
+                            </select>
+                            <input name="q" class="form-control" type="text" style="width:50%;min-width:100px!important;max-width:480px;" placeholder="Search for..."  aria-label="Search">
+                            <button type="submit" class="form-control input-group-append input-group-text amber lighten-3" style="width:15%;min-width:80px;max-width: 100px; ">
+                                <i class="fa fa-search" aria-hidden="true"></i>&nbsp;&nbsp;Search
+                            </button>
+                        </form>
+                    </li>
+                </ul>
+                <!--/Link -->
+            </div>
+            <!-- Collapsible content -->
+        </div>
+    </nav>
+    <!--/.Navbar-->
+</header>
+<main style=" position: relative;">
+    <div class="container mt-5 pt-3">
+        <div class="row">
+            <div  class="col alert alert-success" role="alert" ><mark style="background-color: #aacd4e">枸杞</mark> 的相关记录有 <mark>18</mark> 条。</div>
+        </div>
+        <div class="row">
+            <div class="col col-xs-12 alert alert-info" role="alert">
+                <div class="row subheading">
+                    <div class="col col-xs-2 col-md-2 text-right panel-collapse">序号</div>
+                    <div class="col col-xs-6 col-sm-6 col-md-10 text-left" >1</div>
+                </div>
+                <div class="row subheading">
+                    <div class="col col-xs-2 col-md-2 text-right panel-collapse">药品名称</div>
+                    <div class="col col-xs-7 col-sm-6 col-md-10 text-left" >杞菊地黄口服液</div>
+                </div>
+                <div class="row">
+                    <div class="col col-xs-2 col-md-2 text-right">生产企业</div>
+                    <div class="col col-xs-7 col-sm-6 col-md-10" >江西美媛春药业股份有限公司</div>
+                </div>
+                <div class="row">
+                    <div class="col col-xs-2 col-md-2 text-right">处方</div>
+                    <div class="col col-xs-7 col-sm-6 col-md-10">
+                        <mark >茯苓50g</mark>
+                        <mark >泽泻50g</mark>
+                        <mark  style="background-color: #aacd4e" >枸杞子33g</mark>
+                        <mark >菊花33g</mark>
+                        <mark >熟地黄130g</mark>
+                        <mark >山茱萸(制)65g</mark>
+                        <mark >牡丹皮50g</mark>
+                        <mark >山药65g</mark>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col col-xs-12 alert alert-info" role="alert">
+                <div class="row subheading">
+                    <div class="col col-xs-2 col-md-2 text-right panel-collapse">序号</div>
+                    <div class="col col-xs-6 col-sm-6 col-md-10 text-left" >2</div>
+                </div>
+                <div class="row subheading">
+                    <div class="col col-xs-2 col-md-2 text-right panel-collapse">药品名称</div>
+                    <div class="col col-xs-7 col-sm-6 col-md-10 text-left" >杞菊地黄丸</div>
+                </div>
+                <div class="row">
+                    <div class="col col-xs-2 col-md-2 text-right">生产企业</div>
+                    <div class="col col-xs-7 col-sm-6 col-md-10" >江西众源药业有限公司</div>
+                </div>
+                <div class="row">
+                    <div class="col col-xs-2 col-md-2 text-right">处方</div>
+                    <div class="col col-xs-7 col-sm-6 col-md-10">
+                        <mark  style="background-color: #aacd4e" >枸杞子40g</mark>
+                        <mark >菊花40g</mark>
+                        <mark >熟山黄160g</mark>
+                        <mark >酒萸肉80g</mark>
+                        <mark >牡丹皮60g</mark>
+                        <mark >山药80g</mark>
+                        <mark >茯苓60g</mark>
+                        <mark >泽泻60g</mark>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col col-xs-12 alert alert-info" role="alert">
+                <div class="row subheading">
+                    <div class="col col-xs-2 col-md-2 text-right panel-collapse">序号</div>
+                    <div class="col col-xs-6 col-sm-6 col-md-10 text-left" >3</div>
+                </div>
+                <div class="row subheading">
+                    <div class="col col-xs-2 col-md-2 text-right panel-collapse">药品名称</div>
+                    <div class="col col-xs-7 col-sm-6 col-md-10 text-left" >五子衍宗口服液</div>
+                </div>
+                <div class="row">
+                    <div class="col col-xs-2 col-md-2 text-right">生产企业</div>
+                    <div class="col col-xs-7 col-sm-6 col-md-10" >江西诚志永丰药业有限责任公司</div>
+                </div>
+                <div class="row">
+                    <div class="col col-xs-2 col-md-2 text-right">处方</div>
+                    <div class="col col-xs-7 col-sm-6 col-md-10">
+                        <mark  style="background-color: #aacd4e" >枸杞子300g</mark>
+                        <mark >菟丝子(炒)300g</mark>
+                        <mark >覆盆子150g</mark>
+                        <mark >五味子(醋蒸)38g</mark>
+                        <mark >车前子(盐炒)75g</mark>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col col-xs-12 alert alert-info" role="alert">
+                <div class="row subheading">
+                    <div class="col col-xs-2 col-md-2 text-right panel-collapse">序号</div>
+                    <div class="col col-xs-6 col-sm-6 col-md-10 text-left" >4</div>
+                </div>
+                <div class="row subheading">
+                    <div class="col col-xs-2 col-md-2 text-right panel-collapse">药品名称</div>
+                    <div class="col col-xs-7 col-sm-6 col-md-10 text-left" >杞菊地黄口服液</div>
+                </div>
+                <div class="row">
+                    <div class="col col-xs-2 col-md-2 text-right">生产企业</div>
+                    <div class="col col-xs-7 col-sm-6 col-md-10" >江西诚志永丰药业有限责任公司</div>
+                </div>
+                <div class="row">
+                    <div class="col col-xs-2 col-md-2 text-right">处方</div>
+                    <div class="col col-xs-7 col-sm-6 col-md-10">
+                        <mark  style="background-color: #aacd4e" >枸杞子33g</mark>
+                        <mark >菊花33g</mark>
+                        <mark >熟地黄130g</mark>
+                        <mark >山茱萸(制)65g</mark>
+                        <mark >牡丹皮50g</mark>
+                        <mark >山药65g</mark>
+                        <mark >茯苓50g</mark>
+                        <mark >泽泻50g</mark>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col col-xs-12 alert alert-info" role="alert">
+                <div class="row subheading">
+                    <div class="col col-xs-2 col-md-2 text-right panel-collapse">序号</div>
+                    <div class="col col-xs-6 col-sm-6 col-md-10 text-left" >5</div>
+                </div>
+                <div class="row subheading">
+                    <div class="col col-xs-2 col-md-2 text-right panel-collapse">药品名称</div>
+                    <div class="col col-xs-7 col-sm-6 col-md-10 text-left" >杞菊地黄口服液</div>
+                </div>
+                <div class="row">
+                    <div class="col col-xs-2 col-md-2 text-right">生产企业</div>
+                    <div class="col col-xs-7 col-sm-6 col-md-10" >江西钟山药业有限责任公司</div>
+                </div>
+                <div class="row">
+                    <div class="col col-xs-2 col-md-2 text-right">处方</div>
+                    <div class="col col-xs-7 col-sm-6 col-md-10">
+                        <mark  style="background-color: #aacd4e" >枸杞子33g</mark>
+                        <mark >菊花33g</mark>
+                        <mark >熟山黄130g</mark>
+                        <mark >山茱萸65g</mark>
+                        <mark >牡丹皮50g</mark>
+                        <mark >山药65g</mark>
+                        <mark >茯苓50g</mark>
+                        <mark >泽泻50g</mark>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col col-xs-12 alert alert-info" role="alert">
+                <div class="row subheading">
+                    <div class="col col-xs-2 col-md-2 text-right panel-collapse">序号</div>
+                    <div class="col col-xs-6 col-sm-6 col-md-10 text-left" >6</div>
+                </div>
+                <div class="row subheading">
+                    <div class="col col-xs-2 col-md-2 text-right panel-collapse">药品名称</div>
+                    <div class="col col-xs-7 col-sm-6 col-md-10 text-left" >肾宝糖浆</div>
+                </div>
+                <div class="row">
+                    <div class="col col-xs-2 col-md-2 text-right">生产企业</div>
+                    <div class="col col-xs-7 col-sm-6 col-md-10" >江西半边天药业有限公司</div>
+                </div>
+                <div class="row">
+                    <div class="col col-xs-2 col-md-2 text-right">处方</div>
+                    <div class="col col-xs-7 col-sm-6 col-md-10">
+                        <mark >蛇床子28g</mark>
+                        <mark >川芎28g</mark>
+                        <mark >茧丝子66g</mark>
+                        <mark >补骨脂29g</mark>
+                        <mark >茯苓30g</mark>
+                        <mark >红参20g</mark>
+                        <mark >小茴香14g</mark>
+                        <mark >五味子36g</mark>
+                        <mark >金樱子95g</mark>
+                        <mark >白术14g</mark>
+                        <mark >当归47g</mark>
+                        <mark >覆盆子33g</mark>
+                        <mark >制何首乌74g</mark>
+                        <mark >车前子17g</mark>
+                        <mark >熟地黄94g</mark>
+                        <mark  style="background-color: #aacd4e" >枸杞子66g</mark>
+                        <mark >山药46g</mark>
+                        <mark >淫羊藿 95g</mark>
+                        <mark >葫芦巴94g</mark>
+                        <mark >黄芪51g</mark>
+                        <mark >肉苁蓉47g</mark>
+                        <mark >炙甘草14g</mark>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col col-xs-12 alert alert-info" role="alert">
+                <div class="row subheading">
+                    <div class="col col-xs-2 col-md-2 text-right panel-collapse">序号</div>
+                    <div class="col col-xs-6 col-sm-6 col-md-10 text-left" >7</div>
+                </div>
+                <div class="row subheading">
+                    <div class="col col-xs-2 col-md-2 text-right panel-collapse">药品名称</div>
+                    <div class="col col-xs-7 col-sm-6 col-md-10 text-left" >参茸卫生丸</div>
+                </div>
+                <div class="row">
+                    <div class="col col-xs-2 col-md-2 text-right">生产企业</div>
+                    <div class="col col-xs-7 col-sm-6 col-md-10" >江西大自然制药有限公司</div>
+                </div>
+                <div class="row">
+                    <div class="col col-xs-2 col-md-2 text-right">处方</div>
+                    <div class="col col-xs-7 col-sm-6 col-md-10">
+                        <mark >龙眼肉160g</mark>
+                        <mark >鹿角120g</mark>
+                        <mark >大枣88g</mark>
+                        <mark >桑寄生80g</mark>
+                        <mark >桑寄生8g</mark>
+                        <mark >党参80g</mark>
+                        <mark >酸枣仁80g</mark>
+                        <mark >山茱萸64g</mark>
+                        <mark >木瓜40g</mark>
+                        <mark >清半夏40g</mark>
+                        <mark >黄芪48g</mark>
+                        <mark >锁阳40g</mark>
+                        <mark >肉豆蔲224g</mark>
+                        <mark >补骨脂32g</mark>
+                        <mark >远志20g</mark>
+                        <mark >麦冬24g</mark>
+                        <mark >苍术16g</mark>
+                        <mark >猪脊髓16g</mark>
+                        <mark >甘草80g</mark>
+                        <mark >杜仲80g</mark>
+                        <mark >肉苁蓉80g</mark>
+                        <mark >当归64g</mark>
+                        <mark >猪腰子64g</mark>
+                        <mark >牛膝56g</mark>
+                        <mark >琥珀48g</mark>
+                        <mark >人参 40g</mark>
+                        <mark >鹿茸40g</mark>
+                        <mark >莲子40g</mark>
+                        <mark >白芍40g</mark>
+                        <mark >牡蛎24g</mark>
+                        <mark  style="background-color: #aacd4e" >枸杞子24g</mark>
+                        <mark >龙骨24g</mark>
+                        <mark >狗脊16g</mark>
+                        <mark >乳香16g</mark>
+                        <mark >秋石16g</mark>
+                        <mark >没药8g</mark>
+                        <mark >白术200g</mark>
+                        <mark >陈皮160g</mark>
+                        <mark >熟地黄80g</mark>
+                        <mark >砂仁76g</mark>
+                        <mark >木香40g</mark>
+                        <mark >黄芩40g</mark>
+                        <mark >川芎40g</mark>
+                        <mark >红花32g</mark>
+                        <mark >沉香24g</mark>
+                        <mark >续断24g</mark>
+                        <mark >地黄16g</mark>
+                        <mark >制何首乌16g</mark>
+                        <mark >茯苓120g</mark>
+                        <mark >紫河车15g</mark>
+                        <mark >鹿尾15g</mark>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col col-xs-12 alert alert-info" role="alert">
+                <div class="row subheading">
+                    <div class="col col-xs-2 col-md-2 text-right panel-collapse">序号</div>
+                    <div class="col col-xs-6 col-sm-6 col-md-10 text-left" >8</div>
+                </div>
+                <div class="row subheading">
+                    <div class="col col-xs-2 col-md-2 text-right panel-collapse">药品名称</div>
+                    <div class="col col-xs-7 col-sm-6 col-md-10 text-left" >固本延龄丸</div>
+                </div>
+                <div class="row">
+                    <div class="col col-xs-2 col-md-2 text-right">生产企业</div>
+                    <div class="col col-xs-7 col-sm-6 col-md-10" >江西大自然制药有限公司</div>
+                </div>
+                <div class="row">
+                    <div class="col col-xs-2 col-md-2 text-right">处方</div>
+                    <div class="col col-xs-7 col-sm-6 col-md-10">
+                        <mark >人参 60g</mark>
+                        <mark >麦冬60g</mark>
+                        <mark >五味子60g</mark>
+                        <mark >天冬60g</mark>
+                        <mark >地黄60g</mark>
+                        <mark >熟地黄60g</mark>
+                        <mark >山药60g</mark>
+                        <mark >泽泻30g</mark>
+                        <mark >茯苓60g</mark>
+                        <mark >牛膝60g</mark>
+                        <mark >山茱萸60g</mark>
+                        <mark >杜仲60g</mark>
+                        <mark >木香60g</mark>
+                        <mark >远志30g</mark>
+                        <mark >柏子仁60g</mark>
+                        <mark >花椒30g</mark>
+                        <mark >石菖蒲30g</mark>
+                        <mark >丹参120g</mark>
+                        <mark >肉苁蓉120g</mark>
+                        <mark  style="background-color: #aacd4e" >枸杞子45g</mark>
+                        <mark >覆盆子45g</mark>
+                        <mark >地骨皮45g</mark>
+                        <mark >鹿角胶30g</mark>
+                        <mark >菟丝子120g</mark>
+                        <mark >鱼鳔珠30g</mark>
+                        <mark >珍珠9g</mark>
+                        <mark >狗鞭25g</mark>
+                        <mark >巴戟天60g</mark>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col col-xs-12 alert alert-info" role="alert">
+                <div class="row subheading">
+                    <div class="col col-xs-2 col-md-2 text-right panel-collapse">序号</div>
+                    <div class="col col-xs-6 col-sm-6 col-md-10 text-left" >9</div>
+                </div>
+                <div class="row subheading">
+                    <div class="col col-xs-2 col-md-2 text-right panel-collapse">药品名称</div>
+                    <div class="col col-xs-7 col-sm-6 col-md-10 text-left" >杞菊地黄丸</div>
+                </div>
+                <div class="row">
+                    <div class="col col-xs-2 col-md-2 text-right">生产企业</div>
+                    <div class="col col-xs-7 col-sm-6 col-md-10" >江西半边天药业有限公司</div>
+                </div>
+                <div class="row">
+                    <div class="col col-xs-2 col-md-2 text-right">处方</div>
+                    <div class="col col-xs-7 col-sm-6 col-md-10">
+                        <mark  style="background-color: #aacd4e" >枸杞子40g</mark>
+                        <mark >酒萸肉80g</mark>
+                        <mark >熟地黄160g</mark>
+                        <mark >牡丹皮60g</mark>
+                        <mark >山药80g</mark>
+                        <mark >茯苓60g</mark>
+                        <mark >泽泻60g</mark>
+                        <mark >菊花40g</mark>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col col-xs-12 alert alert-info" role="alert">
+                <div class="row subheading">
+                    <div class="col col-xs-2 col-md-2 text-right panel-collapse">序号</div>
+                    <div class="col col-xs-6 col-sm-6 col-md-10 text-left" >10</div>
+                </div>
+                <div class="row subheading">
+                    <div class="col col-xs-2 col-md-2 text-right panel-collapse">药品名称</div>
+                    <div class="col col-xs-7 col-sm-6 col-md-10 text-left" >五子衍宗口服液</div>
+                </div>
+                <div class="row">
+                    <div class="col col-xs-2 col-md-2 text-right">生产企业</div>
+                    <div class="col col-xs-7 col-sm-6 col-md-10" >江西大自然制药有限公司</div>
+                </div>
+                <div class="row">
+                    <div class="col col-xs-2 col-md-2 text-right">处方</div>
+                    <div class="col col-xs-7 col-sm-6 col-md-10">
+                        <mark  style="background-color: #aacd4e" >枸杞子300g</mark>
+                        <mark >菟丝子300g</mark>
+                        <mark >覆盆子150g</mark>
+                        <mark >五味子38g</mark>
+                        <mark >车前子75g</mark>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col col-xs-12 alert alert-info" role="alert">
+                <div class="row subheading">
+                    <div class="col col-xs-2 col-md-2 text-right panel-collapse">序号</div>
+                    <div class="col col-xs-6 col-sm-6 col-md-10 text-left" >11</div>
+                </div>
+                <div class="row subheading">
+                    <div class="col col-xs-2 col-md-2 text-right panel-collapse">药品名称</div>
+                    <div class="col col-xs-7 col-sm-6 col-md-10 text-left" >参茸卫生丸</div>
+                </div>
+                <div class="row">
+                    <div class="col col-xs-2 col-md-2 text-right">生产企业</div>
+                    <div class="col col-xs-7 col-sm-6 col-md-10" >江西新生命制药有限公司</div>
+                </div>
+                <div class="row">
+                    <div class="col col-xs-2 col-md-2 text-right">处方</div>
+                    <div class="col col-xs-7 col-sm-6 col-md-10">
+                        <mark >龙眼肉120g</mark>
+                        <mark >鹿角160g</mark>
+                        <mark >大枣88g</mark>
+                        <mark >醋香附80g</mark>
+                        <mark >酒肉苁蓉80g</mark>
+                        <mark >盐杜仲64g</mark>
+                        <mark >当归64g</mark>
+                        <mark >猪腰子56g</mark>
+                        <mark >牛膝48g</mark>
+                        <mark >琥珀40g</mark>
+                        <mark >人参 40g</mark>
+                        <mark >鹿茸40g</mark>
+                        <mark >莲子40g</mark>
+                        <mark >白芍24g</mark>
+                        <mark >牡蛎24g</mark>
+                        <mark  style="background-color: #aacd4e" >枸杞子24g</mark>
+                        <mark >龙骨16g</mark>
+                        <mark >乳香(醋制) 16g</mark>
+                        <mark >秋石16g</mark>
+                        <mark >鹿尾15g</mark>
+                        <mark >没药(醋制)8g</mark>
+                        <mark >陈皮160g</mark>
+                        <mark >白术(麸炒)200g</mark>
+                        <mark >熟地黄80g</mark>
+                        <mark >砂仁76g</mark>
+                        <mark >木香40g</mark>
+                        <mark >黄芩40g</mark>
+                        <mark >川芎40g</mark>
+                        <mark >红花32g</mark>
+                        <mark >沉香24g</mark>
+                        <mark >续断24g</mark>
+                        <mark >地黄16g</mark>
+                        <mark >制何首乌16g</mark>
+                        <mark >茯苓120g</mark>
+                        <mark >紫河车15g</mark>
+                        <mark >甘草80g</mark>
+                        <mark >桑寄生8g</mark>
+                        <mark >党参80g</mark>
+                        <mark >酸枣仁(炒)80g</mark>
+                        <mark >山茱萸(酒制)64g</mark>
+                        <mark >木瓜40g</mark>
+                        <mark >黄芪48g</mark>
+                        <mark >清半夏40g</mark>
+                        <mark >锁阳40g</mark>
+                        <mark >肉豆蔲24g</mark>
+                        <mark >盐补骨脂32g</mark>
+                        <mark >远志(制)20g</mark>
+                        <mark >麦冬24g</mark>
+                        <mark >苍术16g</mark>
+                        <mark >猪脊髓16g</mark>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col col-xs-12 alert alert-info" role="alert">
+                <div class="row subheading">
+                    <div class="col col-xs-2 col-md-2 text-right panel-collapse">序号</div>
+                    <div class="col col-xs-6 col-sm-6 col-md-10 text-left" >12</div>
+                </div>
+                <div class="row subheading">
+                    <div class="col col-xs-2 col-md-2 text-right panel-collapse">药品名称</div>
+                    <div class="col col-xs-7 col-sm-6 col-md-10 text-left" >全鹿丸</div>
+                </div>
+                <div class="row">
+                    <div class="col col-xs-2 col-md-2 text-right">生产企业</div>
+                    <div class="col col-xs-7 col-sm-6 col-md-10" >江西新生命制药有限公司</div>
+                </div>
+                <div class="row">
+                    <div class="col col-xs-2 col-md-2 text-right">处方</div>
+                    <div class="col col-xs-7 col-sm-6 col-md-10">
+                        <mark >锁阳（酒炒）40g</mark>
+                        <mark >党参40g</mark>
+                        <mark >地黄40g</mark>
+                        <mark >牛膝40g</mark>
+                        <mark >熟地黄40g</mark>
+                        <mark >楮实子40g</mark>
+                        <mark >菟丝子40g</mark>
+                        <mark >山药40g</mark>
+                        <mark >盐补骨脂40g</mark>
+                        <mark  style="background-color: #aacd4e" >枸杞子（盐水炒）40g</mark>
+                        <mark >川芎40g</mark>
+                        <mark >肉苁蓉40g</mark>
+                        <mark >酒当归40g</mark>
+                        <mark >巴戟天40g</mark>
+                        <mark >炙甘草40g</mark>
+                        <mark >天冬40g</mark>
+                        <mark >五味子（蒸）40g</mark>
+                        <mark >麦冬40g</mark>
+                        <mark >炒白术40g</mark>
+                        <mark >覆盆子40g</mark>
+                        <mark >盐杜仲40g</mark>
+                        <mark >芡实40g</mark>
+                        <mark >花椒20g</mark>
+                        <mark >茯苓40g</mark>
+                        <mark >陈皮40g</mark>
+                        <mark >炙黄芪40g</mark>
+                        <mark >小茴香（酒炒）20g</mark>
+                        <mark >盐续断40g</mark>
+                        <mark >青盐20g</mark>
+                        <mark >胡芦巴（酒炒）40g</mark>
+                        <mark >沉香20g</mark>
+                        <mark >全鹿干80g</mark>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col col-xs-12 alert alert-info" role="alert">
+                <div class="row subheading">
+                    <div class="col col-xs-2 col-md-2 text-right panel-collapse">序号</div>
+                    <div class="col col-xs-6 col-sm-6 col-md-10 text-left" >13</div>
+                </div>
+                <div class="row subheading">
+                    <div class="col col-xs-2 col-md-2 text-right panel-collapse">药品名称</div>
+                    <div class="col col-xs-7 col-sm-6 col-md-10 text-left" >肾宝合剂</div>
+                </div>
+                <div class="row">
+                    <div class="col col-xs-2 col-md-2 text-right">生产企业</div>
+                    <div class="col col-xs-7 col-sm-6 col-md-10" >江西诚志永丰药业有限责任公司</div>
+                </div>
+                <div class="row">
+                    <div class="col col-xs-2 col-md-2 text-right">处方</div>
+                    <div class="col col-xs-7 col-sm-6 col-md-10">
+                        <mark >川芎28g</mark>
+                        <mark >菟丝子66g</mark>
+                        <mark >补骨脂29g</mark>
+                        <mark >茯苓30g</mark>
+                        <mark >红参20g</mark>
+                        <mark >小茴香14g</mark>
+                        <mark >五味子36g</mark>
+                        <mark >金樱子95g</mark>
+                        <mark >白术14g</mark>
+                        <mark >当归47g</mark>
+                        <mark >覆盆子33g</mark>
+                        <mark >制何首乌74g</mark>
+                        <mark >车前子17g</mark>
+                        <mark >熟地黄94g</mark>
+                        <mark  style="background-color: #aacd4e" >枸杞子66g</mark>
+                        <mark >山药46g</mark>
+                        <mark >葫芦巴94g</mark>
+                        <mark >黄芪51g</mark>
+                        <mark >肉苁蓉47g</mark>
+                        <mark >炙甘草14g</mark>
+                        <mark >淫羊藿 95g</mark>
+                        <mark >蛇床子28g</mark>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col col-xs-12 alert alert-info" role="alert">
+                <div class="row subheading">
+                    <div class="col col-xs-2 col-md-2 text-right panel-collapse">序号</div>
+                    <div class="col col-xs-6 col-sm-6 col-md-10 text-left" >14</div>
+                </div>
+                <div class="row subheading">
+                    <div class="col col-xs-2 col-md-2 text-right panel-collapse">药品名称</div>
+                    <div class="col col-xs-7 col-sm-6 col-md-10 text-left" >肾宝糖浆</div>
+                </div>
+                <div class="row">
+                    <div class="col col-xs-2 col-md-2 text-right">生产企业</div>
+                    <div class="col col-xs-7 col-sm-6 col-md-10" >江西诚志永丰药业有限责任公司</div>
+                </div>
+                <div class="row">
+                    <div class="col col-xs-2 col-md-2 text-right">处方</div>
+                    <div class="col col-xs-7 col-sm-6 col-md-10">
+                        <mark >蛇床子28g</mark>
+                        <mark >川芎28g</mark>
+                        <mark >茧丝子66g</mark>
+                        <mark >补骨脂29g</mark>
+                        <mark >茯苓30g</mark>
+                        <mark >红参20g</mark>
+                        <mark >小茴香14g</mark>
+                        <mark >五味子36g</mark>
+                        <mark >金樱子95g</mark>
+                        <mark >白术14g</mark>
+                        <mark >当归47g</mark>
+                        <mark >覆盆子33g</mark>
+                        <mark >制何首乌74g</mark>
+                        <mark >车前子17g</mark>
+                        <mark >熟地黄94g</mark>
+                        <mark  style="background-color: #aacd4e" >枸杞子66g</mark>
+                        <mark >山药46g</mark>
+                        <mark >淫羊藿 95g</mark>
+                        <mark >葫芦巴94g</mark>
+                        <mark >黄芪51g</mark>
+                        <mark >肉苁蓉47g</mark>
+                        <mark >炙甘草14g</mark>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col col-xs-12 alert alert-info" role="alert">
+                <div class="row subheading">
+                    <div class="col col-xs-2 col-md-2 text-right panel-collapse">序号</div>
+                    <div class="col col-xs-6 col-sm-6 col-md-10 text-left" >15</div>
+                </div>
+                <div class="row subheading">
+                    <div class="col col-xs-2 col-md-2 text-right panel-collapse">药品名称</div>
+                    <div class="col col-xs-7 col-sm-6 col-md-10 text-left" >肾宝糖浆</div>
+                </div>
+                <div class="row">
+                    <div class="col col-xs-2 col-md-2 text-right">生产企业</div>
+                    <div class="col col-xs-7 col-sm-6 col-md-10" >江西美媛春药业股份有限公司</div>
+                </div>
+                <div class="row">
+                    <div class="col col-xs-2 col-md-2 text-right">处方</div>
+                    <div class="col col-xs-7 col-sm-6 col-md-10">
+                        <mark >蛇床子28g</mark>
+                        <mark >川芎28g</mark>
+                        <mark >茧丝子66g</mark>
+                        <mark >补骨脂29g</mark>
+                        <mark >茯苓30g</mark>
+                        <mark >红参20g</mark>
+                        <mark >小茴香14g</mark>
+                        <mark >五味子36g</mark>
+                        <mark >金樱子95g</mark>
+                        <mark >白术14g</mark>
+                        <mark >当归47g</mark>
+                        <mark >覆盆子33g</mark>
+                        <mark >制何首乌74g</mark>
+                        <mark >车前子17g</mark>
+                        <mark >熟地黄94g</mark>
+                        <mark  style="background-color: #aacd4e" >枸杞子66g</mark>
+                        <mark >山药46g</mark>
+                        <mark >淫羊藿 95g</mark>
+                        <mark >葫芦巴94g</mark>
+                        <mark >黄芪51g</mark>
+                        <mark >肉苁蓉47g</mark>
+                        <mark >炙甘草14g</mark>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col col-xs-12 alert alert-info" role="alert">
+                <div class="row subheading">
+                    <div class="col col-xs-2 col-md-2 text-right panel-collapse">序号</div>
+                    <div class="col col-xs-6 col-sm-6 col-md-10 text-left" >16</div>
+                </div>
+                <div class="row subheading">
+                    <div class="col col-xs-2 col-md-2 text-right panel-collapse">药品名称</div>
+                    <div class="col col-xs-7 col-sm-6 col-md-10 text-left" >补肾丸</div>
+                </div>
+                <div class="row">
+                    <div class="col col-xs-2 col-md-2 text-right">生产企业</div>
+                    <div class="col col-xs-7 col-sm-6 col-md-10" >江西半边天药业有限公司</div>
+                </div>
+                <div class="row">
+                    <div class="col col-xs-2 col-md-2 text-right">处方</div>
+                    <div class="col col-xs-7 col-sm-6 col-md-10">
+                        <mark >牛睾丸100g</mark>
+                        <mark >马睾丸100g</mark>
+                        <mark >羊睾丸100g</mark>
+                        <mark >鹿鞭 100g</mark>
+                        <mark >驴鞭100g</mark>
+                        <mark >手参150g</mark>
+                        <mark >黄精150g</mark>
+                        <mark  style="background-color: #aacd4e" >枸杞200g</mark>
+                        <mark >甘草200g</mark>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col col-xs-12 alert alert-info" role="alert">
+                <div class="row subheading">
+                    <div class="col col-xs-2 col-md-2 text-right panel-collapse">序号</div>
+                    <div class="col col-xs-6 col-sm-6 col-md-10 text-left" >17</div>
+                </div>
+                <div class="row subheading">
+                    <div class="col col-xs-2 col-md-2 text-right panel-collapse">药品名称</div>
+                    <div class="col col-xs-7 col-sm-6 col-md-10 text-left" >参茸卫生丸</div>
+                </div>
+                <div class="row">
+                    <div class="col col-xs-2 col-md-2 text-right">生产企业</div>
+                    <div class="col col-xs-7 col-sm-6 col-md-10" >江西半边天药业有限公司</div>
+                </div>
+                <div class="row">
+                    <div class="col col-xs-2 col-md-2 text-right">处方</div>
+                    <div class="col col-xs-7 col-sm-6 col-md-10">
+                        <mark >龙眼肉160g</mark>
+                        <mark >鹿角120g</mark>
+                        <mark >大枣88g</mark>
+                        <mark >醋香附80g</mark>
+                        <mark >酒肉苁蓉80g</mark>
+                        <mark >盐杜仲80g</mark>
+                        <mark >当归64g</mark>
+                        <mark >猪腰子64g</mark>
+                        <mark >牛膝56g</mark>
+                        <mark >琥珀48g</mark>
+                        <mark >人参 40g</mark>
+                        <mark >鹿茸40g</mark>
+                        <mark >莲子40g</mark>
+                        <mark >白芍40g</mark>
+                        <mark >牡蛎24g</mark>
+                        <mark  style="background-color: #aacd4e" >枸杞子24g</mark>
+                        <mark >龙骨24g</mark>
+                        <mark >狗脊(沙烫）16g</mark>
+                        <mark >乳香(醋制) 16g</mark>
+                        <mark >秋石16g</mark>
+                        <mark >鹿尾15g</mark>
+                        <mark >没药(醋制)8g</mark>
+                        <mark >陈皮160g</mark>
+                        <mark >白术(麸炒)200g</mark>
+                        <mark >熟地黄80g</mark>
+                        <mark >砂仁76g</mark>
+                        <mark >木香40g</mark>
+                        <mark >黄芩40g</mark>
+                        <mark >川芎40g</mark>
+                        <mark >红花32g</mark>
+                        <mark >沉香24g</mark>
+                        <mark >续断24g</mark>
+                        <mark >地黄16g</mark>
+                        <mark >制何首乌16g</mark>
+                        <mark >茯苓120g</mark>
+                        <mark >紫河车15g</mark>
+                        <mark >甘草80g</mark>
+                        <mark >桑寄生8g</mark>
+                        <mark >党参80g</mark>
+                        <mark >酸枣仁(炒)80g</mark>
+                        <mark >山茱萸(酒制)64g</mark>
+                        <mark >木瓜40g</mark>
+                        <mark >黄芪48g</mark>
+                        <mark >清半夏40g</mark>
+                        <mark >锁阳40g</mark>
+                        <mark >肉豆蔲(煨)24g</mark>
+                        <mark >盐补骨脂32g</mark>
+                        <mark >制远志20g</mark>
+                        <mark >麦冬24g</mark>
+                        <mark >苍术16g</mark>
+                        <mark >猪脊髓16g</mark>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col col-xs-12 alert alert-info" role="alert">
+                <div class="row subheading">
+                    <div class="col col-xs-2 col-md-2 text-right panel-collapse">序号</div>
+                    <div class="col col-xs-6 col-sm-6 col-md-10 text-left" >18</div>
+                </div>
+                <div class="row subheading">
+                    <div class="col col-xs-2 col-md-2 text-right panel-collapse">药品名称</div>
+                    <div class="col col-xs-7 col-sm-6 col-md-10 text-left" >全鹿丸</div>
+                </div>
+                <div class="row">
+                    <div class="col col-xs-2 col-md-2 text-right">生产企业</div>
+                    <div class="col col-xs-7 col-sm-6 col-md-10" >江西大自然制药有限公司</div>
+                </div>
+                <div class="row">
+                    <div class="col col-xs-2 col-md-2 text-right">处方</div>
+                    <div class="col col-xs-7 col-sm-6 col-md-10">
+                        <mark  style="background-color: #aacd4e" >枸杞子40g</mark>
+                        <mark >川芎40g</mark>
+                        <mark >肉苁蓉40g</mark>
+                        <mark >酒当归40g</mark>
+                        <mark >巴戟天40g</mark>
+                        <mark >炙甘草40g</mark>
+                        <mark >天冬40g</mark>
+                        <mark >五味子40g</mark>
+                        <mark >麦冬40g</mark>
+                        <mark >炒白术40g</mark>
+                        <mark >覆盆子40g</mark>
+                        <mark >盐杜仲40g</mark>
+                        <mark >芡实40g</mark>
+                        <mark >花椒20g</mark>
+                        <mark >茯苓40g</mark>
+                        <mark >盐补骨脂40g</mark>
+                        <mark >炙黄芪40g</mark>
+                        <mark >小茴香20g</mark>
+                        <mark >盐续断40g</mark>
+                        <mark >青盐20g</mark>
+                        <mark >胡芦巴40g</mark>
+                        <mark >沉香20g</mark>
+                        <mark >陈皮40g</mark>
+                        <mark >全鹿干80g</mark>
+                        <mark >锁阳40g</mark>
+                        <mark >党参40g</mark>
+                        <mark >地黄40g</mark>
+                        <mark >牛膝40g</mark>
+                        <mark >熟地黄40g</mark>
+                        <mark >楮实子40g</mark>
+                        <mark >菟丝子40g</mark>
+                        <mark >山药40g</mark>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+;ajlsdf;lkajs;ldkjlas</br>
+adf
+<br>
+asdf
+<br>
+asf
+<footer  class="page-footer font-small blue pt-4" style="position: relative;">
+    <div class="container footer">
+        <div class="row">
+            <div class="footer-copyright text-center py-3 small">
+                <p>&copy; 2018 Copyright:
+                    <a href="https://mdbootstrap.com/education/bootstrap/">鼎石互联网工作室</a></p>
+                <p>MIT License</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script  type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script  type="text/javascript"  src="/build/js/angular.js"></script>
+<script  type="text/javascript"  src="/build/js/angular-animate.min.js"></script>
+<script  type="text/javascript"  src="/build/js/angular-route.min.js"></script>
+<script  type="text/javascript"  src="/build/js/angular-aria.min.js"></script>
+<script  type="text/javascript"  src="/build/js/angular-messages.min.js"></script>
+<script  type="text/javascript"  src="/build/js/svg-assets-cache.js"></script>
+<script  type="text/javascript"  src="/build/js/tabDialog.js"></script>
+<script  type="text/javascript"  src="/build/js/angular-material.js"></script>
+
+
+
+<script  type="text/javascript"  src="/build/manifest.js"></script>
+<script  type="text/javascript"  src="/build/js/common.js"></script>
+<script  type="text/javascript"  src="/build/js/app.js"></script>
+<script  type="text/javascript"  src="/build/js/angular.min.js"></script>
+<script  type="text/javascript"  src="/build/js/angular-sanitize.min.js"></script>
+
+<!-- SCRIPTS -->
+<!-- JQuery -->
+<script type="text/javascript" src="/build/js/jquery-3.3.1.min.js"></script>
+<!-- Bootstrap tooltips -->
+<script type="text/javascript" src="/build/js/popper.min.js"></script>
+<!-- Bootstrap core JavaScript -->
+<script type="text/javascript" src="/build/js/bootstrap.min.js"></script>
+<!-- MDB core JavaScript -->
+<script type="text/javascript" src="/build/js/mdb.min.js"></script>
+<script>
+    /* var myAppModule = angular.modules("myApp",["ngSanitize"]);
+     myAppModulec.config(function ($interpolateProvider) {
+     $interpolateProvider.startSymbol('[[').endSymbol(']]');
+
+     });*/
+</script>
+
+<!-- Page rendered on December 18, 2018 at 1:28:40 PM GMT -->
+</body>
+</html>

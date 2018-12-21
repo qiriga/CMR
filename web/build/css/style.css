@@ -1,8 +1,8 @@
 html,
 body,
-main,
 #intro {
     height: 100%;
+    margin: 0;
 }
 
 #intro {
@@ -13,3 +13,36 @@ main,
     background-size: cover;
 }
 
+.content {
+    padding: 20px;
+    min-height: 100%;
+    padding-bottom: 50px;
+    margin: 0 auto -50px;
+}
+.content-inside {
+    padding: 20px;
+    padding-bottom: 50px;
+}
+.footer {
+    height: 50px;
+}
+
+/* Document level adjustments */
+html {
+    font-size: 17px;
+}
+@media (max-width: 900px) {
+    html { font-size: 15px; }
+}
+@media (max-width: 500px) {
+    html { font-size: 13px; }
+    h1 { font-size: 2rem; }
+}
+
+/* Type will scale with document */
+h2 {
+    font-size: 2.5rem;
+}
+h3 {
+    font-size: 2rem;
+}
