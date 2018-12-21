@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="{{ app.request.locale }}">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <title>{% block title %}江西省中成药数据库{% endblock %}</title>
+        <link rel="alternate" type="application/rss+xml" title="{{ 'rss.title'|trans }}" href="{{ path('blog_rss') }}">
+        {% block stylesheets %}
+            <!-- Font Awesome -->
+            <link rel="stylesheet" href="{{ asset('build/css/mdb/font-awesome.min.css')}}">
+            <!-- Bootstrap core CSS -->
+            <link href="{{ asset('build/css/bootstrap/bootstrap.min.css') }}" rel="stylesheet">
+            <!-- Material Design Bootstrap -->
+            <link href="{{ asset('build/css/mdb/mdb.min.css') }}" rel="stylesheet">
+            <!-- sb-admin -->
+            <link href="{{ asset('build/css/sb-admin/sb-admin.css')}}" rel="stylesheet">
+            <!-- Your custom styles (optional) -->
+            <link href="{{ asset('build/css/style.css') }}" rel="stylesheet">
+        {% endblock %}
+
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+    </head>
+
+    <body id="{% block body_id %}{% endblock %}">
+
+        {% block header %}
+        <header>
+                <!--Navbar-->
+                <nav class="navbar navbar-expand-lg navbar-dark primary-color fixed-top">
+                <div class="container">
+                 <!-- Navbar brand -->
+                <a class="navbar-brand" href="{{ path('homepage') }}">江西省中成药数据库</a>
+                <!-- Collapsible content -->
+                <div class="collapse navbar-collapse" id="basicExampleNav">
+                    <!-- Links -->
+                    <ul class="navbar-nav mr-auto w-100">
+                        <!-- Dropdown -->
+                        <li class="nav-item active w-100" >
+                            <form id="sform" class="form-inline input-group w-100" action="{{ path('chmedicine_search_button') }}" method="post" >
+                                <select name="t" class="form-control input-group" style="width:15%;min-width:75px!important;max-width:100px!important;color: rebeccapurple;">
+                                    <option value="0" selected>企业</option>
+                                    <option value="1">品种</option>
+                                    <option value="2">药材</option>
+                                </select>
+                                <input name="q" class="form-control" type="text" style="width:50%;min-width:100px!important;max-width:480px;" placeholder="{{ 'post.search_for'|trans }}"  aria-label="Search">
+                                <button type="submit" class="form-control input-group-append input-group-text amber lighten-3" style="width:15%;min-width:80px;max-width: 100px; ">
+                                    <i class="fa fa-search" aria-hidden="true"></i>&nbsp;&nbsp;{{ 'medicine.search'|trans }}
+                                </button>
+                            </form>
+                        </li>
+                    </ul>
+                    <!--/Link -->
+                </div>
+                <!-- Collapsible content -->
+                </div>
+                </nav>
+                <!--/.Navbar-->
+            </header>
+        {% endblock %}
+        {% block main %}
+
+        {% endblock %}
+        {% block footer %}
+            <!-- Footer -->
+            <footer class="footer unique-color-dark" >
+                <div class="container my-auto">
+                    <div class="copyright text-center my-auto white-text font-small">
+                        <span>Copyright © 鼎石互联网工作室 {{ 'now'|date('Y') }}</span><br>
+                        <span>{{ 'mit_license'|trans }}</span>
+                    </div>
+                </div>
+            </footer>
+
+        {% endblock %}
+
+        {% block javascripts %}
+            <script  type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+            <script  type="text/javascript"  src="{{ asset('build/js/angularjs/angular.js') }}"></script>
+            <script  type="text/javascript"  src="{{ asset('build/js/angularjs/angular-animate.min.js') }}"></script>
+            <script  type="text/javascript"  src="{{ asset('build/js/angularjs/angular-route.min.js') }}"></script>
+            <script  type="text/javascript"  src="{{ asset('build/js/angularjs/angular-aria.min.js') }}"></script>
+            <script  type="text/javascript"  src="{{ asset('build/js/angularjs/angular-messages.min.js') }}"></script>
+            <script  type="text/javascript"  src="{{ asset('build/js/svg-assets-cache.js') }}"></script>
+            <script  type="text/javascript"  src="{{ asset('build/js/tabDialog.js') }}"></script>
+            <script  type="text/javascript"  src="{{ asset('build/js/angularjs/angular-material.js') }}"></script>
+
+
+
+            <script  type="text/javascript"  src="{{ asset('build/manifest.js') }}"></script>
+            <script  type="text/javascript"  src="{{ asset('build/js/common.js') }}"></script>
+            <script  type="text/javascript"  src="{{ asset('build/js/app.js') }}"></script>
+            <script  type="text/javascript"  src="{{ asset('build/js/angularjs/angular.min.js') }}"></script>
+            <script  type="text/javascript"  src="{{ asset('build/js/angularjs/angular-sanitize.min.js') }}"></script>
+
+            <!-- SCRIPTS -->
+            <!-- JQuery -->
+            <script type="text/javascript" src="{{ asset('build/js/jquery-3.3.1.min.js') }}"></script>
+            <!-- Bootstrap tooltips -->
+            <script type="text/javascript" src="{{ asset('build/js/popper.min.js') }}"></script>
+            <!-- Bootstrap core JavaScript -->
+            <script type="text/javascript" src="{{ asset('build/js/bootstrap/bootstrap.min.js') }}"></script>
+            <!-- MDB core JavaScript -->
+            <script type="text/javascript" src="{{ asset('build/js/mdb/mdb.min.js') }}"></script>
+            <script>
+               /* var myAppModule = angular.modules("myApp",["ngSanitize"]);
+                myAppModulec.config(function ($interpolateProvider) {
+                    $interpolateProvider.startSymbol('[[').endSymbol(']]');
+
+                });*/
+               $(document).ready(function () {
+                    var wh = $(window).height();
+                    var hh=$("header").height();
+                    var mh=$("main").height();
+                    var fh=$("footer").height();
+                    if( (mh+fh) < wh){
+                        //$("footer").addClass("sticky-footer");
+                    }
+                    console.log("wh"+wh+"hh"+hh+"mh"+mh);
+               })
+            </script>
+        {% endblock %}
+
+        {# it's not mandatory to set the timezone in localizeddate(). This is done to
+           avoid errors when the 'intl' PHP extension is not available and the application
+           is forced to use the limited "intl polyfill", which only supports UTC and GMT #}
+        <!-- Page rendered on {{ 'now'|localizeddate('long', 'long', null, 'UTC') }} -->
+    </body>
+</html>
