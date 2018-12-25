@@ -31,7 +31,7 @@ homepage:
   requirements:
     _locale: '%app_locales%'
   defaults:
-    _controller: AppBundle:ChMedicine:searchchmedicine
-    template: chmedicines/homepage.html.twig
+    _controller: AppBundle:Search:searchchmedicine
+    template: search/homepage.html.twig
     _locale: zh_CN
     #_controller: Symfony\Bundel\FrameworkBundle\Controller\TemplateController::templateAction

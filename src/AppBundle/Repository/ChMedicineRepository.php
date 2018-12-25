@@ -132,7 +132,7 @@ class ChMedicineRepository extends EntityRepository
         $terms = array_unique(explode(' ', mb_strtolower($searchQuery)));
         /*return $terms;*/
         return array_filter($terms, function ($term) {
-            return 2 <= mb_strlen($term);
+            return 1 <= mb_strlen($term);
         });
     }
 }

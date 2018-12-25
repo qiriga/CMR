@@ -56,23 +56,6 @@ class ChMedicineController extends Controller
 
 
 
-    /**
-     * @Route("/chmedicinesearchbutton", name="chmedicine_search_button")
-     *
-     */
-    public function searchchmedicinebuttonAction(Request $request)
-    {
-        if ('POST' != $request->getMethod()) {
-            return $this->render('/chmedicines/homepage.html.twig');
-        }
-
-        $query = $_POST['q'];//$request->('q', '');
-        $searchType = $_POST['t'];//$request->query->get('t', '');
-        $chmedicines = $this->getDoctrine()->getRepository(ChMedicine::class)->findBySearchQuery($query,$searchType);
-        //var_dump($query,$searchType,$chmedicines);
-        return $this->render('/chmedicines/searchlist.html.twig',array('chmedicines' => $chmedicines,'keyword'=>$query));
-
-    }
 
 
 
@@ -82,7 +65,7 @@ class ChMedicineController extends Controller
      * @Method("GET")
      *
      * @return Response|JsonResponse
-     */
+
     public function searchchmedicineAction(Request $request)
     {
         if (!$request->isXmlHttpRequest()) {
@@ -101,7 +84,7 @@ class ChMedicineController extends Controller
         //echo sizeof($chmedicines);
         /*$results = [];
         $results[] = ['title'=>htmlspecialchars(sizeof($chmedicines)),];
-        return $this->json($results);*/
+        return $this->json($results);* /
         $results = [];
         foreach ($chmedicines as $chmedicine) {
             $results[] = [
@@ -113,5 +96,5 @@ class ChMedicineController extends Controller
         }
 
         return $this->json($results);
-    }
+    }*/
 }
